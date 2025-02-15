@@ -1,7 +1,7 @@
 export function createMap(containerId) {
 	let app = new PIXI.Application({
 		width: 800,
-		height: 600,
+		height: 800,
 		backgroundColor: 0x1099bb
 	});
 
@@ -13,14 +13,36 @@ export function createMap(containerId) {
 	let mapSprite = new PIXI.Sprite(map1);
   
 	mapSprite.anchor.set(0.5);
-	mapSprite.x = app.screen.width / 2;
-	mapSprite.y = app.screen.height / 2;
+	mapSprite.x = app.screen.width;
+	mapSprite.y = app.screen.height;
 	app.stage.addChild(mapSprite);
   
 	// Constants
 	const minScale = 0.15;
 	const maxScale = 3.0;
-    
+    	let dragging = false;
+	let previousPosition = { x: 0, y: 0 };
+	
+	// Start dragging
+	mapSprite.on('pointerdown', (event) => {
+	  dragging = true;
+	  previousPosition = event.data.global;
+	});
+	
+	// Move map while dragging
+	mapSprite.on('pointermove', (event) => {
+	  if (!dragging) return;
+	
+	  let newPosition = event.data.global;
+	  mapSprite.x += newPosition.x - previousPosition.x;
+	  mapSprite.y += newPosition.y - previousPosition.y;
+	  previousPosition = newPosition;
+	});
+	
+	// Stop dragging when the mouse is released
+	mapSprite.on('pointerup', () => dragging = false);
+	mapSprite.on('pointerupoutside', () => dragging = false);
+	
 	// Listen for the mouse wheel event to enable zooming
 	app.view.addEventListener('wheel', (event) => {
 		event.preventDefault(); // Prevent the default scroll behavior
