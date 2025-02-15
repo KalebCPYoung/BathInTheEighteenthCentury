@@ -18,8 +18,8 @@ export function createMap(containerId) {
 	app.stage.addChild(mapSprite);
   
 	// Constants
-	const minScale = 0.5;
-	const maxScale = 6.0;
+	const minScale = 0.15;
+	const maxScale = 3.0;
     
 	// Listen for the mouse wheel event to enable zooming
 	app.view.addEventListener('wheel', (event) => {
