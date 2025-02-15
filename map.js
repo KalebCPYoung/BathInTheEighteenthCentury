@@ -21,19 +21,19 @@ export function createMap(containerId) {
     const maxScale = 3.0;
     
     // Listen for the mouse wheel event to enable zooming
-    app.view.addEventListener('wheel', (event) => {
-      event.preventDefault(); // Prevent the default scroll behavior
-      
-      // Determine the zoom factor based on the wheel delta
-      const zoomFactor = event.deltaY < 0 ? 1.1 : 0.9;
-      
-      // Calculate new scale while respecting our limits
-      let newScale = mapSprite.scale.x * zoomFactor;
-      if (newScale > maxScale) newScale = maxScale;
-      if (newScale < minScale) newScale = minScale;
-      
-      // Apply the new scale uniformly to both axes
-      mapSprite.scale.set(newScale);
-    });
+app.view.addEventListener('wheel', (event) => {
+  event.preventDefault(); // Prevent the default scroll behavior
+
+  // Determine the zoom factor based on the wheel delta
+  const zoomFactor = event.deltaY < 0 ? 1.1 : 0.9;
+
+  // Calculate new scale while respecting our limits
+  let newScale = mapSprite.scale.x * zoomFactor;
+  if (newScale > maxScale) newScale = maxScale;
+  if (newScale < minScale) newScale = minScale;
+
+  // Apply the new scale uniformly to both axes
+  mapSprite.scale.set(newScale);
+}, { passive: false });
   return app;
 }
