@@ -5,7 +5,7 @@ export function createMap(containerId) {
 		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 	}).addTo(map);
 	
-	fetch('maps/map1.tif')
+	fetch('maps/map1085.tif')
 	.then(response => response.arrayBuffer())  // Convert the response to ArrayBuffer
 	.then(data => {
 			// Create a GeoRaster instance from the ArrayBuffer
