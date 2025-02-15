@@ -15,6 +15,7 @@ export function createMap(containerId) {
   mapSprite.x = app.screen.width / 2;
   mapSprite.y = app.screen.height / 2;
   app.stage.addChild(mapSprite);
+  let zoomFactor = 1.1;
   app.view.addEventListener('wheel', (event) => {
   let scale = event.deltaY < 0 ? zoomFactor : 1 / zoomFactor; // Zoom in or out
   mapSprite.scale.x *= scale;
