@@ -1,1 +1,26 @@
-<strong>This text is important!</strong>
+ <html>
+ 	<head>  
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.0.0/pixi.min.js"></script>
+		<script type="module" src="map.js"></script>
+		<title>Bath in the 18th Century</title>
+	</head>  
+	<body>  
+		<font size="6" style="font-family:verdana"><center><strong>Bath in the 18th Century</strong></center></font><br />
+		<center>
+			<style>
+				#mapContainer {
+					width: 800px;  
+					height: 600px;  
+					border: 5px solid black;
+					border-radius: 10px;
+					overflow: hidden;
+					display: inline-block;
+			</style>
+			<div id="mapContainer"></div>
+			<script type="module">
+				import { createMap } from './map.js';
+				createMap('mapContainer');
+			</script>
+		</center>
+	</body>
+</html>
