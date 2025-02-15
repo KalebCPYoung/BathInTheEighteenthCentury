@@ -19,6 +19,7 @@ export function createMap(containerId) {
  // Set initial zoom limits
     const minScale = 0.5;
     const maxScale = 3.0;
+    const zoomFactor = 0.1;
     
     // Listen for the mouse wheel event to enable zooming
 app.view.addEventListener('wheel', (event) => {
