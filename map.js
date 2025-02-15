@@ -26,7 +26,7 @@ export function createMap(containerId) {
 		event.preventDefault(); // Prevent the default scroll behavior
 
 		// Determine the zoom factor based on the wheel delta
-		const zoomFactor = event.deltaY < 0 ? 1.1 : 0.9;
+		var zoomFactor = event.deltaY < 0 ? 1.1 : 0.9;
 
 		// Calculate new scale while respecting our limits
 		let newScale = mapSprite.scale.x * zoomFactor;
