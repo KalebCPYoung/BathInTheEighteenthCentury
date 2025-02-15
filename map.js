@@ -15,11 +15,25 @@ export function createMap(containerId) {
   mapSprite.x = app.screen.width / 2;
   mapSprite.y = app.screen.height / 2;
   app.stage.addChild(mapSprite);
-  let zoomFactor = 1.1;
-  app.view.addEventListener('wheel', (event) => {
-  let scale = event.deltaY < 0 ? zoomFactor : 1 / zoomFactor; // Zoom in or out
-  mapSprite.scale.x *= scale;
-  mapSprite.scale.y *= scale;
-  });
+  
+ // Set initial zoom limits
+    const minScale = 0.5;
+    const maxScale = 3.0;
+    
+    // Listen for the mouse wheel event to enable zooming
+    app.view.addEventListener('wheel', (event) => {
+      event.preventDefault(); // Prevent the default scroll behavior
+      
+      // Determine the zoom factor based on the wheel delta
+      const zoomFactor = event.deltaY < 0 ? 1.1 : 0.9;
+      
+      // Calculate new scale while respecting our limits
+      let newScale = mapSprite.scale.x * zoomFactor;
+      if (newScale > maxScale) newScale = maxScale;
+      if (newScale < minScale) newScale = minScale;
+      
+      // Apply the new scale uniformly to both axes
+      mapSprite.scale.set(newScale);
+    });
   return app;
 }
