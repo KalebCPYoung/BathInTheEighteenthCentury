@@ -1,42 +1,54 @@
- <html>
-	<head>  
-		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-		<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-		<script src="https://unpkg.com/leaflet-geotiff"></script>
-		<script src="https://unpkg.com/leaflet-geotiff-plotty"></script>
-		<script src="https://unpkg.com/plotty"></script>
-		<script src="https://unpkg.com/geotiff"></script>
-		<title>Bath in the 18th Century</title>
-	</head>  
-	<body>  
-		<font size="6" style="font-family:verdana"><center><strong>Bath in the 18th Century</strong></center></font><br />
-		<center>
-			<style>
-				#mapContainer {
-					width: 800px;  
-					height: 600px;  
-					border: 5px solid black;
-					border-radius: 10px;
-					overflow: hidden;
-					display: inline-block;
-			</style>
-			<div id="mapContainer"></div>
-			<script type="module">
-					const map = L.map("mapContainer").setView([51.3810, -2.3590], 13);
+<html>
 
-					L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(map);
+<head>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+	<script src="https://unpkg.com/geotiff"></script>
+	<script src="https://unpkg.com/georaster"></script>
+	<script src="https://unpkg.com/georaster-layer-for-leaflet"></script>
+	<title>Bath in the 18th Century</title>
+</head>
 
-										var layer = L.leafletGeotiff("maps/map1805.tif", { opacity: 0.5 });
-										layer.addTo(map);
+<body>
+	<font size="6" style="font-family:verdana">
+		<center><strong>Bath in the 18th Century</strong></center>
+	</font><br />
+	<center>
+		<style>
+			#mapContainer {
+				width: 800px;
+				height: 800px;
+				border: 5px solid black;
+				border-radius: 10px;
+				overflow: hidden;
+				display: inline-block;
+		</style>
+		<div id="mapContainer"></div>
+		<script>
+			console.log();
+			const map = L.map("mapContainer").setView([51.3810, -2.3590], 14);
 
-					//var map1735 = L.imageOverlay("maps/map1735.tif",[51.386482,-2.378191], [51.586482,-2.578191]);
-					//map1735.addTo(map);
+			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(map);
 
-					map.dragging.enable();
-					map.scrollWheelZoom.enable();
-					map.setMinZoom(13);
-					map.setMaxZoom(18);
-			</script>
-		</center>
-	</body>
+			fetch("maps/map1805.tif")
+			.then(response => response.arrayBuffer()) // Convert response to binary
+			.then(data => parseGeoraster(data)) // Parse it correctly
+			.then(georaster => {
+				console.log("GeoTIFF loaded:", georaster); // Debugging log
+
+				const layer = new GeoRasterLayer({
+					georaster: georaster,
+					opacity: 0.5
+				});
+				layer.addTo(map);
+			})
+			
+			map.dragging.enable();
+			map.scrollWheelZoom.enable();
+			map.setMinZoom(14);
+			map.setMaxZoom(18);
+		</script>
+	</center>
+</body>
+
 </html>
