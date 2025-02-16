@@ -1,13 +1,11 @@
  <html>
- 	<head>  
-		 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-		<script src="https://unpkg.com/leaflet"></script>
+	<head>  
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+		<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 		<script src="https://unpkg.com/leaflet-geotiff"></script>
+		<script src="https://unpkg.com/leaflet-geotiff-plotty"></script>
 		<script src="https://unpkg.com/plotty"></script>
-		<script src="https://unpkg.com/leaflet-geotiff/dist/leaflet-geotiff-plotty.js"></script>
-		<script type="module" src="map.js"></script>
-		<script src="https://unpkg.com/georaster-layer-for-leaflet/dist/georaster-layer-for-leaflet.min.js"></script>
-
+		<script src="https://unpkg.com/geotiff"></script>
 		<title>Bath in the 18th Century</title>
 	</head>  
 	<body>  
@@ -24,8 +22,20 @@
 			</style>
 			<div id="mapContainer"></div>
 			<script type="module">
-				import { createMap } from './map.js';
-				createMap('mapContainer');
+					const map = L.map("mapContainer").setView([51.3810, -2.3590], 13);
+
+					L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(map);
+
+										var layer = L.leafletGeotiff("maps/map1805.tif", { opacity: 0.5 });
+										layer.addTo(map);
+
+					//var map1735 = L.imageOverlay("maps/map1735.tif",[51.386482,-2.378191], [51.586482,-2.578191]);
+					//map1735.addTo(map);
+
+					map.dragging.enable();
+					map.scrollWheelZoom.enable();
+					map.setMinZoom(13);
+					map.setMaxZoom(18);
 			</script>
 		</center>
 	</body>
