@@ -75,16 +75,12 @@
 	//Streets 
 	let streetData = [];
 
-	fetch("maps/streetsinfo.json")
+	fetch("maps/streetinfo.json")
 		.then(res => res.json())
 		.then(data => {
-			streetData = data; // Assign the loaded data to streetData
-		})
-		.catch(error => {
-			console.error('Error loading street data:', error);
+			streetData = data;
 		});
 
-	// Then, fetch the GeoJSON and add event listeners for the map features
 	fetch("maps/streets.geojson")
 		.then(res => res.json())
 		.then(data => {
@@ -94,26 +90,17 @@
 					layer.on("click", function () {
 						const streetid = feature.properties.id;
 						console.log(streetid);
-
-						// Ensure streetData is loaded and is an array before searching
 						if (Array.isArray(streetData)) {
 							const street = streetData.find(item => item.CODE === streetid);
-
-							// If a matching street is found, update the input boxes
 							if (street) {
 								document.getElementById("streetNameBox").value = street.NAME || '';
 								document.getElementById("streetDateBox").value = street.DISPLAY_DATE || '';
 								document.getElementById("streetInfoBox").value = street.DESCRIPTION || '';
 							}
-						} else {
-							console.error('streetData is not loaded correctly.');
 						}
 					});
 				}
 			}).addTo(displaymap);
-		})
-		.catch(error => {
-			console.error('Error loading streets GeoJSON:', error);
 		});
 	
 	//Clear all maps
