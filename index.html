@@ -3,9 +3,6 @@
 <head>
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-	<script src="https://unpkg.com/geotiff"></script>
-	<script src="https://unpkg.com/georaster"></script>
-	<script src="https://unpkg.com/georaster-layer-for-leaflet"></script>
 	<title>Bath in the 18th Century</title>
 </head>
 
@@ -14,6 +11,20 @@
 		<center><strong>Bath in the 18th Century</strong></center>
 	</font><br />
 	<center>
+		<div class="column">
+			<input type="radio" id="map1735radio" name="mapselection" value="map1735radio"
+				onchange="if (map1735radio.checked){ removemaps(); map1735.addTo(displaymap);}" checked>
+			<label for="map1735radio">1735 Map of Bath by John Wood</label><br>
+			<input type="radio" id="map1795radio" name="mapselection" value="map1795radio"
+				onchange="if (map1795radio.checked){ removemaps(); map1795.addTo(displaymap);}">
+			<label for="map1795radio">c.1795 Map of Bath by Harcourt Masters </label><br>
+			<input type="radio" id="map1830radio" name="mapselection" value="map1830radio"
+				onchange="if (map1830radio.checked){ removemaps(); map1830.addTo(displaymap);}">
+			<label for="map1830radio">1830 Map of Bath</label><br>
+			<input type="radio" id="map2025radio" name="mapselection" value="map2025radio" checked=true
+				onchange="if (map2025radio.checked ){ removemaps(); map2025.addTo(displaymap);}">
+			<label for="map2025radio">Open Street Map</label><br>
+		</div>
 		<style>
 			#mapContainer {
 				width: 800px;
@@ -23,32 +34,123 @@
 				overflow: hidden;
 				display: inline-block;
 		</style>
-		<div id="mapContainer"></div>
-		<script>
-			console.log();
-			const map = L.map("mapContainer").setView([51.3810, -2.3590], 14);
-
-			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(map);
-
-			fetch("https://kalebcpyoung.github.io/BathInTheEighteenthCentury/maps/map1805.tif")
-			.then(response => response.arrayBuffer()) // Convert response to binary
-			.then(data => parseGeoraster(data)) // Parse it correctly
-			.then(georaster => {
-				console.log("GeoTIFF loaded:", georaster); // Debugging log
-
-				const layer = new GeoRasterLayer({
-					georaster: georaster,
-					opacity: 0.5
-				});
-				layer.addTo(map);
-			})
-			
-			map.dragging.enable();
-			map.scrollWheelZoom.enable();
-			map.setMinZoom(14);
-			map.setMaxZoom(18);
-		</script>
+		<div class="column" id="mapContainer"></div>
 	</center>
+	<div>
+			<text id="streetNameBox" <b></b></label>
+			<text id="streetDatesBox" <b></b></label>
+			<text id="streetInfoBox" </text>
+	</div>
 </body>
+
+////////////
+// SCRIPT //
+////////////
+<script>
+	///////////////
+	// MAP CLASS //
+	///////////////
+	class Map {
+		constructor(name, file, bounds) {
+			this.name = name;
+			this.file = file;
+		}
+	}
+	
+	//////////
+	// MAPS //
+	//////////
+	//Open Street Map
+	var map2025 = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'})
+	
+	//1735 Map of Bath by John Wood
+	var map1735 = L.imageOverlay("maps/map1735.png", [[51.3884394, -2.3697282], [51.37379693, -2.34973871]]);
+	
+	//Map of Bath c.1795 by Harcourt Masters
+	var map1795 = L.imageOverlay("maps/map1795.png", [[51.39414584,-2.37656393], [51.372888826,-2.348713179]]);
+																																							 
+	//Map of Bath c.1830
+	var map1830 = L.imageOverlay("maps/map1830.png", [[51.39619731, -2.37219388], [51.37473806, -2.34224875]]);
+	
+	//Streets 
+	let streetData = [];
+
+	fetch("maps/streetsinfo.json")
+		.then(res => res.json())
+		.then(data => {
+			streetData = data; // Assign the loaded data to streetData
+		})
+		.catch(error => {
+			console.error('Error loading street data:', error);
+		});
+
+	// Then, fetch the GeoJSON and add event listeners for the map features
+	fetch("maps/streets.geojson")
+		.then(res => res.json())
+		.then(data => {
+			streetsLayer = L.geoJSON(data, {
+				style: { color: "red", weight: 2 },
+				onEachFeature: function (feature, layer) {
+					layer.on("click", function () {
+						const streetid = feature.properties.id;
+						console.log(streetid);
+
+						// Ensure streetData is loaded and is an array before searching
+						if (Array.isArray(streetData)) {
+							const street = streetData.find(item => item.CODE === streetid);
+
+							// If a matching street is found, update the input boxes
+							if (street) {
+								document.getElementById("streetNameBox").value = street.NAME || '';
+								document.getElementById("streetDateBox").value = street.DISPLAY_DATE || '';
+								document.getElementById("streetInfoBox").value = street.DESCRIPTION || '';
+							}
+						} else {
+							console.error('streetData is not loaded correctly.');
+						}
+					});
+				}
+			}).addTo(displaymap);
+		})
+		.catch(error => {
+			console.error('Error loading streets GeoJSON:', error);
+		});
+	
+	//Clear all maps
+	function removemaps() {
+		if (displaymap.hasLayer(map1735)) {
+			displaymap.removeLayer(map1735);
+		}
+		if (displaymap.hasLayer(map1795)) {
+			displaymap.removeLayer(map1795);
+		}
+		if (displaymap.hasLayer(map1830)) {
+			displaymap.removeLayer(map1830);
+		}
+		if (displaymap.hasLayer(map2025)) {
+			displaymap.removeLayer(map2025);
+		}
+	}
+
+	
+	
+
+	
+
+	
+	//////////
+	// MAIN //
+	//////////
+	//Setup
+	const displaymap = L.map("mapContainer").setView([51.3810, -2.3590], 14);
+	
+	//default map
+	map2025.addTo(displaymap);
+
+	displaymap.dragging.enable();
+	displaymap.scrollWheelZoom.enable();
+	displaymap.setMinZoom(14);
+	displaymap.setMaxZoom(18);
+</script>
 
 </html>
