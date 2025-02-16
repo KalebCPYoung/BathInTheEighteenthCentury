@@ -30,7 +30,7 @@
 
 			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(map);
 
-			fetch("maps/map1805.tif")
+			fetch("https://kalebcpyoung.github.io/BathInTheEighteenthCentury/maps/map1805.tif")
 			.then(response => response.arrayBuffer()) // Convert response to binary
 			.then(data => parseGeoraster(data)) // Parse it correctly
 			.then(georaster => {
