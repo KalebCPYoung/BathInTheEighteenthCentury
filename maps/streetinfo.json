@@ -1,0 +1,164 @@
+[
+ {
+   "CODE": "QSR",
+   "NAME": "Queen Square",
+   "FROM": 1729,
+   "TO": 1738,
+   "DISPLAY_DATE": "1729 - 1738",
+   "DESCRIPTION": "Queen Square, named in honour of Queen Caroline, wife of George II, was designed by John Wood the Elder; construction began in 1729 and finished seven years later in 1736.¹ The development was defined by its semicircle square garden of in the centre, which was initially surrounded by low stone balustrades.² The iconic obelisk was erected by Beau Nash in 1738 in honour of the Prince and Princess of Wales and to match the obelisk he had erected in the Orange Grove a few years prior.³ The square was initially intended to be on flat ground, but this proved too costly leading to the development sloping upwards on its eastern and western sides.? The centre piece house in Queen Square was intended to be that on the western side, which had been set back from the others by a large front garden, however this was filled in in 1831.? ",
+   "REFERENCES": "1 - Gadd, Georgian Summer, p. 40.\n2 - ibid.\n3 - ibid.\n4 - Little, Bath Portrait, p. 49.\n5 - ibid."
+},
+ {
+   "CODE": "CRC",
+   "NAME": "The Circus",
+   "FROM": 1754,
+   "TO": 1766,
+   "DISPLAY_DATE": "1754 - 1766",
+   "DESCRIPTION": "The Circus, originally named the King’s Circus, was the last development designed by John Wood the Elder, dying shortly after construction began in 1754.¹ Construction was continued by his son, John Wood the Younger and completed in 1766.² It was closely designed after the Roman Coliseum, and it  has also been suggested that inspiration was taken from the Place des Victoires in Paris.³ Paired with Queen Square, it was intended to be one of four similar developments, the other three located in Bathwick, Lansdown and south-east of the old city, Pierrepont.?",
+   "REFERENCES": "1 - Gadd, Georgian Summer, pp. 47-50.\n2 - Little, Bath Portrait , pp. 57-58.\n3 - ibid.\n4 - ibid."
+},
+ {
+   "CODE": "GAY",
+   "NAME": "Gay Street",
+   "FROM": 1729,
+   "TO": 1738,
+   "DISPLAY_DATE": "1729 - 1738",
+   "DESCRIPTION": "Gay Street, originally part of Barton Street, was constructed in conjunction with Queen Square from 1729 to 1738.¹  It was named after Robert Gay, whom the land had been leased from in order to construct the street and Queen Square.² Houses were initially only constructed on the east side of the street and only as far north as George Street, but houses were extend up to the Circus upon its construction.³",
+   "REFERENCES": "1 - Haddon, Bath, p. 120; Gadd, Georgian Summer, p. 47.\n2 - ibid.\n3 - ibid."
+},
+ {
+   "CODE": "QPR",
+   "NAME": "Queen's Parade",
+   "FROM": 1769,
+   "TO": 1771,
+   "DISPLAY_DATE": "1769 - 1771",
+   "DESCRIPTION": "Queen’s Parade was designed and constructed by John Wood the Younger from 1769 to 1771.¹ ",
+   "REFERENCES": "1 - Gadd, Georgian Summer, p. 105."
+},
+ {
+   "CODE": "BRK",
+   "NAME": "Brock Street",
+   "FROM": 1767,
+   "TO": 1767,
+   "DISPLAY_DATE": "1767",
+   "DESCRIPTION": "Brock Street began was constructed in 1767 alongside the Royal Cresent, to connect the new development to the Circus.¹  The street was constructed by John Wood the Younger and named after his father in-law.²",
+   "REFERENCES": "1 - Gadd, Georgian Summer, p. 101.\n2 - Haddon, Bath, p. 121."
+},
+ {
+   "CODE": "RCS",
+   "NAME": "Royal Crescent",
+   "FROM": 1767,
+   "TO": 1775,
+   "DISPLAY_DATE": "1767 - 1775",
+   "DESCRIPTION": "The Royal Crescent was designed by John Wood the Younger after completion of the Circus.¹ Construction began along side Brock Street in 1767 and lasted for 8 years.²  Inspiration was taken from the Circus in the design on the buildings.³",
+   "REFERENCES": "1 - Gadd, Georgian Summer, p. 100.\n2 - ibid.\n3 - ibid., p. 104."
+},
+ {
+   "CODE": "MRL",
+   "NAME": "Marlborough Buildings",
+   "FROM": 1788,
+   "TO": 1791,
+   "DISPLAY_DATE": "1788 - 1791",
+   "DESCRIPTION": "The Marlborough Buildings were constructed between 1788 and 1791.¹",
+   "REFERENCES": "1 - Historic England, 1-12 Marlborough Buildings, 1396353."
+},
+ {
+   "CODE": "SJS",
+   "NAME": "St. James's Square",
+   "FROM": 1790,
+   "TO": 1793,
+   "DISPLAY_DATE": "1790 - 1793",
+   "DESCRIPTION": "St. James’s Square was designed by John Palmer, with construction beginning in 1790, continuing alongside the Lansdown Crescent, and completing in 1793.¹",
+   "REFERENCES": "1 - Historic England, 23-37 (Consec) and Attached Railings, 1394850; Gadd, Georgian Summer, pp. 131-132."
+},
+ {
+   "CODE": "CHS",
+   "NAME": "Church Street",
+   "FROM": 1780,
+   "TO": 1789,
+   "DISPLAY_DATE": "c. 1780",
+   "DESCRIPTION": "Church Street, now Upper Church Street, was likely designed and constructed by John Wood the Younger around 1780.¹",
+   "REFERENCES": "1 - Historic England, 2 and 3, Upper Church Street, 1395470."
+},
+ {
+   "CODE": "THS",
+   "NAME": "Cathrine Place & Thomas Street",
+   "FROM": 1780,
+   "TO": 1789,
+   "DISPLAY_DATE": "c. 1780",
+   "DESCRIPTION": "Cathrine Place and Thomas Street were designed by John Wood the Younger and constructed around 1780.¹",
+   "REFERENCES": "1 - Haddon, Bath, p. 121."
+},
+ {
+   "CODE": "MRG",
+   "NAME": "Margaret Buildings",
+   "FROM": 1767,
+   "TO": 1767,
+   "DISPLAY_DATE": "c. 1767",
+   "DESCRIPTION": "Margret Buildings, or sometimes Margret’s Buildings’ appear to have been constructed alongside Brock Street in 1767.¹",
+   "REFERENCES": "1 - Gadd, Georgian Summer, p. 101."
+},
+ {
+   "CODE": "CSL",
+   "NAME": "Circus Stable Lane",
+   "FROM": null,
+   "TO": null,
+   "DISPLAY_DATE": "c. . 1766",
+   "DESCRIPTION": "Circus Stable Lane, today named Circus Mews, appears to have been designed by John Wood the Elder or Younger.¹"
+   "REFERENCES": "1 - Gadd, Georgian Summer, pp. 47-50."
+},
+ {
+   "CODE": "SBL",
+   "NAME": "Stable Lane",
+   "FROM": 1770,
+   "TO": 1770,
+   "DISPLAY_DATE": "c. 1770",
+   "DESCRIPTION": "Stable Lane appears to have been developed around the same time as Queen’s Square, appearing on maps by the 1770s.",
+   "REFERENCES": ""
+},
+ {
+   "CODE": "HTG",
+   "NAME": "Chapel Row",
+   "FROM": 1734,
+   "TO": 1734,
+   "DISPLAY_DATE": "c. 1734",
+   "DESCRIPTION": "Chapel Row, also referred to as Wood Street, was designed and constructed by John Wood the Elder around 1734.¹",
+   "REFERENCES": "1 - Haddon, Bath, p. 120; Historic England, 7, 8 and 9, Chapel Row, 1395501."
+},
+ {
+   "CODE": "PNS",
+   "NAME": "Princes Street",
+   "FROM": 1734,
+   "TO": 1734,
+   "DISPLAY_DATE": "c. 1730s",
+   "DESCRIPTION": "Princes Street, also refered to as Little Princes Street, appears to have been constructed around the 1730s, at the same time as Queen Square and Chapel Row.",
+   "REFERENCES": ""
+},
+ {
+   "CODE": "BTH",
+   "NAME": "Old City",
+   "FROM": 100,
+   "TO": 100,
+   "DISPLAY_DATE": "c. 100",
+   "DESCRIPTION": "",
+   "REFERENCES": ""
+},
+ {
+   "CODE": "KJW",
+   "NAME": "Old King Street, John Street & Wood Street",
+   "FROM": 1727,
+   "TO": 1729,
+   "DISPLAY_DATE": "1727 - 1729",
+   "DESCRIPTION": "John Street was constructed in 1727, with the adjoining Old King Street, originally named King Street, and Wood Street being added in 1729, constructed on the site of the Barron Grounds.¹  The streets were designed by John Wood the Elder, with John and Wood streets bearing his names.²",
+   "REFERENCES": "1 - Meehan, Famous Houses of Bath & District, p. 190.\n2 - Gadd, Georgian Summer, p. 51."
+},
+ {
+   "CODE": "GRS",
+   "NAME": "George Street",
+   "FROM": 1730,
+   "TO": 1739,
+   "DISPLAY_DATE": "c.1730",
+   "DESCRIPTION": "George Street was likely developed around the same period as Gay Street and the Circus. By the 1730s, some buildings had been developed on the street.¹ ",
+   "REFERENCES": "1 - Meehan, Famous Houses of Bath & District, p. 190."
+}
+]
