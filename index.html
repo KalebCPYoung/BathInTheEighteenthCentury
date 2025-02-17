@@ -1,143 +1,176 @@
-<html>
+				<html>
 
-<head>
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-	<title>Bath in the 18th Century</title>
-</head>
+				<head>
+					<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+					<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+					<title>Bath in the 18th Century</title>
+					<pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="4" height="4">
+						<path d="M-1,1 l2,-2
+										 M0,4 l4,-4
+										 M3,5 l2,-2" 
+									style="stroke:black; stroke-width:1" />
+					</pattern>
+				</head>
+				<body>
+					<font size="6" style="font-family:verdana">
+						<center><strong>Bath in the 18th Century</strong></center>
+					</font>
+					<center>
+						<div style="display: flex; width: 96vw; margin: 2vw; gap: 2vw;">
+							<div style="width: 23vw">
+								<input type="radio" id="map1735radio" name="mapselection" value="map1735radio"
+									onchange="if (map1735radio.checked){ removemaps(); map1735.addTo(displaymap);}" checked>
+								<label for="map1735radio">1735 Map of Bath by John Wood</label><br>
+								<input type="radio" id="map1795radio" name="mapselection" value="map1795radio"
+									onchange="if (map1795radio.checked){ removemaps(); map1795.addTo(displaymap);}">
+								<label for="map1795radio">c.1795 Map of Bath by Harcourt Masters </label><br>
+								<input type="radio" id="map1830radio" name="mapselection" value="map1830radio"
+									onchange="if (map1830radio.checked){ removemaps(); map1830.addTo(displaymap);}">
+								<label for="map1830radio">1830 Map of Bath</label><br>
+								<input type="radio" id="map2025radio" name="mapselection" value="map2025radio" checked=true
+									onchange="if (map2025radio.checked ){ removemaps(); map2025.addTo(displaymap);}">
+								<label for="map2025radio">Open Street Map</label><br>
+							</div>
+							<div style="width;: 46vw">
+								<style>
+									#mapContainer {
+										width: 50vw;
+										height: 80vh;
+										border: 5px solid black;
+										border-radius: 10px;
+										overflow: hidden;
+										display: inline-block;
+								</style>
+								<div class="column" id="mapContainer"></div>
+							</div>
+							<div style="width: 23vw">
+								<b><span id="streetNameBox"></span> </b><br>
+									<span id="streetInfoBox"></span><br><br>
+								<span id="streetInfoReferencesBox" align="left"></span>
+							</div>
+					</center>
+					<center>
+						<span id="yearSelection">1700</span>
+					</center>
+					<center>
+						<div class="slidecontainer" style="width: 80vw">
+								<b>1700</b>
+								<input type="range" min="1700" max="1800" value="1700" 
+											 style="width: 46vw" list="tickmarks"
+											 onchange="document.getElementById('yearSelection').innerText = this.value; selectedyear=this.value; updateStreets();">
+								<datalist id="tickmarks"><option value="1700"></option><option value="1710"></option><option value="1720"></option><option value="1730"></option><option value="1740"></option><option value="1750"></option><option value="1760"></option><option value="1770"></option><option value="1780"></option><option value="1790"></option><option value="1800"></option></datalist>
+								<b>1800</b>
+						</div>
+					</center>
+				</body>
+				<script>
 
-<body>
-	<font size="6" style="font-family:verdana">
-		<center><strong>Bath in the 18th Century</strong></center>
-	</font><br />
-	<center>
-		<div class="column">
-			<input type="radio" id="map1735radio" name="mapselection" value="map1735radio"
-				onchange="if (map1735radio.checked){ removemaps(); map1735.addTo(displaymap);}" checked>
-			<label for="map1735radio">1735 Map of Bath by John Wood</label><br>
-			<input type="radio" id="map1795radio" name="mapselection" value="map1795radio"
-				onchange="if (map1795radio.checked){ removemaps(); map1795.addTo(displaymap);}">
-			<label for="map1795radio">c.1795 Map of Bath by Harcourt Masters </label><br>
-			<input type="radio" id="map1830radio" name="mapselection" value="map1830radio"
-				onchange="if (map1830radio.checked){ removemaps(); map1830.addTo(displaymap);}">
-			<label for="map1830radio">1830 Map of Bath</label><br>
-			<input type="radio" id="map2025radio" name="mapselection" value="map2025radio" checked=true
-				onchange="if (map2025radio.checked ){ removemaps(); map2025.addTo(displaymap);}">
-			<label for="map2025radio">Open Street Map</label><br>
-		</div>
-		<style>
-			#mapContainer {
-				width: 800px;
-				height: 800px;
-				border: 5px solid black;
-				border-radius: 10px;
-				overflow: hidden;
-				display: inline-block;
-		</style>
-		<div class="column" id="mapContainer"></div>
-	</center>
-	<div>
-			<text id="streetNameBox" <b></b></label>
-			<text id="streetDatesBox" <b></b></label>
-			<text id="streetInfoBox" </text>
-	</div>
-</body>
-
-////////////
-// SCRIPT //
-////////////
-<script>
-	///////////////
-	// MAP CLASS //
-	///////////////
-	class Map {
-		constructor(name, file, bounds) {
-			this.name = name;
-			this.file = file;
-		}
-	}
-	
-	//////////
-	// MAPS //
-	//////////
-	//Open Street Map
-	var map2025 = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'})
-	
-	//1735 Map of Bath by John Wood
-	var map1735 = L.imageOverlay("maps/map1735.png", [[51.3884394, -2.3697282], [51.37379693, -2.34973871]]);
-	
-	//Map of Bath c.1795 by Harcourt Masters
-	var map1795 = L.imageOverlay("maps/map1795.png", [[51.39414584,-2.37656393], [51.372888826,-2.348713179]]);
-																																							 
-	//Map of Bath c.1830
-	var map1830 = L.imageOverlay("maps/map1830.png", [[51.39619731, -2.37219388], [51.37473806, -2.34224875]]);
-	
-	//Streets 
-	let streetData = [];
-
-	fetch("maps/streetinfo.json")
-		.then(res => res.json())
-		.then(data => {
-			streetData = data;
-		});
-
-	fetch("maps/streets.geojson")
-		.then(res => res.json())
-		.then(data => {
-			streetsLayer = L.geoJSON(data, {
-				style: { color: "red", weight: 2 },
-				onEachFeature: function (feature, layer) {
-					layer.on("click", function () {
-						const streetid = feature.properties.id;
-						console.log(streetid);
-						if (Array.isArray(streetData)) {
-							const street = streetData.find(item => item.CODE === streetid);
-							if (street) {
-								document.getElementById("streetNameBox").value = street.NAME || '';
-								document.getElementById("streetDateBox").value = street.DISPLAY_DATE || '';
-								document.getElementById("streetInfoBox").value = street.DESCRIPTION || '';
-							}
+					var selectedyear = 1700;
+					///////////////
+					// MAP CLASS //
+					///////////////
+					class Map {
+						constructor(name, file, bounds) {
+							this.name = name;
+							this.file = file;
 						}
-					});
-				}
-			}).addTo(displaymap);
-		});
-	
-	//Clear all maps
-	function removemaps() {
-		if (displaymap.hasLayer(map1735)) {
-			displaymap.removeLayer(map1735);
-		}
-		if (displaymap.hasLayer(map1795)) {
-			displaymap.removeLayer(map1795);
-		}
-		if (displaymap.hasLayer(map1830)) {
-			displaymap.removeLayer(map1830);
-		}
-		if (displaymap.hasLayer(map2025)) {
-			displaymap.removeLayer(map2025);
-		}
-	}
+					}
 
-	
-	
+					//////////
+					// MAPS //
+					//////////
+					//Open Street Map
+					var map2025 = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'})
 
-	
+					//1735 Map of Bath by John Wood
+					var map1735 = L.imageOverlay("maps/map1735.png", [[51.3884394, -2.3697282], [51.37379693, -2.34973871]]);
 
-	
-	//////////
-	// MAIN //
-	//////////
-	//Setup
-	const displaymap = L.map("mapContainer").setView([51.3810, -2.3590], 14);
-	
-	//default map
-	map2025.addTo(displaymap);
+					//Map of Bath c.1795 by Harcourt Masters
+					var map1795 = L.imageOverlay("maps/map1795.png", [[51.39414584,-2.37656393], [51.372888826,-2.348713179]]);
 
-	displaymap.dragging.enable();
-	displaymap.scrollWheelZoom.enable();
-	displaymap.setMinZoom(14);
-	displaymap.setMaxZoom(18);
-</script>
+					//Map of Bath c.1830
+					var map1830 = L.imageOverlay("maps/map1830.png", [[51.39619731, -2.37219388], [51.37473806, -2.34224875]]);
 
-</html>
+					//Streets 
+					var streetData = [];
+					var streetsLayer;
+					
+					fetch("maps/streetinfo.json")
+						.then(res => res.json())
+						.then(data => {
+							console.log(data)
+							streetData = data;
+						});
+					function updateStreets() {
+						if (streetsLayer) {
+								streetsLayer.clearLayers();
+						}
+						fetch("maps/streets.geojson")
+							.then(res => res.json())
+							.then(data => {
+								streetsLayer = L.geoJSON(data, {
+									style: { color: "red", weight: 2 },
+									onEachFeature: function (feature, layer) {
+										const streetid = feature.properties.id;
+										if (Array.isArray(streetData)) {
+												const street = streetData.find(item => item.CODE === streetid);
+												if (street.TO <= selectedyear) {
+														layer.setStyle({ opacity: 1}); 
+												} else {
+														layer.setStyle({ opacity: 0 });
+												}
+											}
+										layer.on("click", function () {
+											console.log(streetid);
+											if (Array.isArray(streetData)) {
+												const street = streetData.find(item => item.CODE === streetid);
+												if (street) {
+													document.getElementById("streetNameBox").innerText = `${street.NAME} (${street.DISPLAY_DATE})` || '';
+													document.getElementById("streetInfoBox").innerText = street.DESCRIPTION || '';
+													document.getElementById("streetInfoReferencesBox").innerText = street.REFERENCES || '';
+												}
+											}
+										});
+									}
+								}).addTo(displaymap);
+							});
+					}
+
+					//Clear all maps
+					function removemaps() {
+						if (displaymap.hasLayer(map1735)) {
+							displaymap.removeLayer(map1735);
+						}
+						if (displaymap.hasLayer(map1795)) {
+							displaymap.removeLayer(map1795);
+						}
+						if (displaymap.hasLayer(map1830)) {
+							displaymap.removeLayer(map1830);
+						}
+						if (displaymap.hasLayer(map2025)) {
+							displaymap.removeLayer(map2025);
+						}
+					}
+
+
+
+
+
+
+
+					//////////
+					// MAIN //
+					//////////
+					//Setup
+					const displaymap = L.map("mapContainer").setView([51.3810, -2.3590], 14);
+
+					//default map
+					map2025.addTo(displaymap);
+					updateStreets();
+					displaymap.dragging.enable();
+					displaymap.scrollWheelZoom.enable();
+					displaymap.setMinZoom(14);
+					displaymap.setMaxZoom(18);
+				</script>
+
+				</html>
