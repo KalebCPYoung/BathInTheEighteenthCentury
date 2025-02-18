@@ -5,7 +5,7 @@
    "FROM": 1729,
    "TO": 1738,
    "DISPLAY_DATE": "1729 - 1738",
-   "DESCRIPTION": "Queen Square, named in honour of Queen Caroline, wife of George II, was designed by John Wood the Elder; construction began in 1729 and finished seven years later in 1736.¹ The development was defined by its semicircle square garden of in the centre, which was initially surrounded by low stone balustrades.² The iconic obelisk was erected by Beau Nash in 1738 in honour of the Prince and Princess of Wales and to match the obelisk he had erected in the Orange Grove a few years prior.³ The square was initially intended to be on flat ground, but this proved too costly leading to the development sloping upwards on its eastern and western sides.? The centre piece house in Queen Square was intended to be that on the western side, which had been set back from the others by a large front garden, however this was filled in in 1831.? ",
+   "DESCRIPTION": "Queen Square, named in honour of Queen Caroline, wife of George II, was designed by John Wood the Elder; construction began in 1729 and finished seven years later in 1736.(1) The development was defined by its semicircle square garden of in the centre, which was initially surrounded by low stone balustrades.(2) The iconic obelisk was erected by Beau Nash in 1738 in honour of the Prince and Princess of Wales and to match the obelisk he had erected in the Orange Grove a few years prior.(3) The square was initially intended to be on flat ground, but this proved too costly leading to the development sloping upwards on its eastern and western sides.(4) The centre piece house in Queen Square was intended to be that on the western side, which had been set back from the others by a large front garden, however this was filled in in 1831.(5) ",
    "REFERENCES": "1 - Gadd, Georgian Summer, p. 40.\n2 - ibid.\n3 - ibid.\n4 - Little, Bath Portrait, p. 49.\n5 - ibid."
 },
  {
@@ -14,7 +14,7 @@
    "FROM": 1754,
    "TO": 1766,
    "DISPLAY_DATE": "1754 - 1766",
-   "DESCRIPTION": "The Circus, originally named the King’s Circus, was the last development designed by John Wood the Elder, dying shortly after construction began in 1754.¹ Construction was continued by his son, John Wood the Younger and completed in 1766.² It was closely designed after the Roman Coliseum, and it  has also been suggested that inspiration was taken from the Place des Victoires in Paris.³ Paired with Queen Square, it was intended to be one of four similar developments, the other three located in Bathwick, Lansdown and south-east of the old city, Pierrepont.?",
+   "DESCRIPTION": "The Circus, originally named the King’s Circus, was the last development designed by John Wood the Elder, dying shortly after construction began in 1754.(1) Construction was continued by his son, John Wood the Younger and completed in 1766.(2) It was closely designed after the Roman Coliseum, and it  has also been suggested that inspiration was taken from the Place des Victoires in Paris.(3) Paired with Queen Square, it was intended to be one of four similar developments, the other three located in Bathwick, Lansdown and south-east of the old city, Pierrepont.(4)",
    "REFERENCES": "1 - Gadd, Georgian Summer, pp. 47-50.\n2 - Little, Bath Portrait , pp. 57-58.\n3 - ibid.\n4 - ibid."
 },
  {
@@ -23,7 +23,7 @@
    "FROM": 1729,
    "TO": 1738,
    "DISPLAY_DATE": "1729 - 1738",
-   "DESCRIPTION": "Gay Street, originally part of Barton Street, was constructed in conjunction with Queen Square from 1729 to 1738.¹  It was named after Robert Gay, whom the land had been leased from in order to construct the street and Queen Square.² Houses were initially only constructed on the east side of the street and only as far north as George Street, but houses were extend up to the Circus upon its construction.³",
+   "DESCRIPTION": "Gay Street, originally part of Barton Street, was constructed in conjunction with Queen Square from 1729 to 1738.(1)  It was named after Robert Gay, whom the land had been leased from in order to construct the street and Queen Square.(2) Houses were initially only constructed on the east side of the street and only as far north as George Street, but houses were extend up to the Circus upon its construction.(3)",
    "REFERENCES": "1 - Haddon, Bath, p. 120; Gadd, Georgian Summer, p. 47.\n2 - ibid.\n3 - ibid."
 },
  {
@@ -32,7 +32,7 @@
    "FROM": 1769,
    "TO": 1771,
    "DISPLAY_DATE": "1769 - 1771",
-   "DESCRIPTION": "Queen’s Parade was designed and constructed by John Wood the Younger from 1769 to 1771.¹ ",
+   "DESCRIPTION": "Queen’s Parade was designed and constructed by John Wood the Younger from 1769 to 1771.(1)",
    "REFERENCES": "1 - Gadd, Georgian Summer, p. 105."
 },
  {
@@ -41,7 +41,7 @@
    "FROM": 1767,
    "TO": 1767,
    "DISPLAY_DATE": "1767",
-   "DESCRIPTION": "Brock Street began was constructed in 1767 alongside the Royal Cresent, to connect the new development to the Circus.¹  The street was constructed by John Wood the Younger and named after his father in-law.²",
+   "DESCRIPTION": "Brock Street began was constructed in 1767 alongside the Royal Cresent, to connect the new development to the Circus.(1)  The street was constructed by John Wood the Younger and named after his father in-law.(2)",
    "REFERENCES": "1 - Gadd, Georgian Summer, p. 101.\n2 - Haddon, Bath, p. 121."
 },
  {
@@ -50,7 +50,7 @@
    "FROM": 1767,
    "TO": 1775,
    "DISPLAY_DATE": "1767 - 1775",
-   "DESCRIPTION": "The Royal Crescent was designed by John Wood the Younger after completion of the Circus.¹ Construction began along side Brock Street in 1767 and lasted for 8 years.²  Inspiration was taken from the Circus in the design on the buildings.³",
+   "DESCRIPTION": "The Royal Crescent was designed by John Wood the Younger after completion of the Circus.(1) Construction began along side Brock Street in 1767 and lasted for 8 years.(2)  Inspiration was taken from the Circus in the design on the buildings.(3)",
    "REFERENCES": "1 - Gadd, Georgian Summer, p. 100.\n2 - ibid.\n3 - ibid., p. 104."
 },
  {
@@ -59,7 +59,7 @@
    "FROM": 1788,
    "TO": 1791,
    "DISPLAY_DATE": "1788 - 1791",
-   "DESCRIPTION": "The Marlborough Buildings were constructed between 1788 and 1791.¹",
+   "DESCRIPTION": "The Marlborough Buildings were constructed between 1788 and 1791.(1)",
    "REFERENCES": "1 - Historic England, 1-12 Marlborough Buildings, 1396353."
 },
  {
@@ -68,7 +68,7 @@
    "FROM": 1790,
    "TO": 1793,
    "DISPLAY_DATE": "1790 - 1793",
-   "DESCRIPTION": "St. James’s Square was designed by John Palmer, with construction beginning in 1790, continuing alongside the Lansdown Crescent, and completing in 1793.¹",
+   "DESCRIPTION": "St. James’s Square was designed by John Palmer, with construction beginning in 1790, continuing alongside the Lansdown Crescent, and completing in 1793.(1)",
    "REFERENCES": "1 - Historic England, 23-37 (Consec) and Attached Railings, 1394850; Gadd, Georgian Summer, pp. 131-132."
 },
  {
@@ -77,7 +77,7 @@
    "FROM": 1780,
    "TO": 1789,
    "DISPLAY_DATE": "c. 1780",
-   "DESCRIPTION": "Church Street, now Upper Church Street, was likely designed and constructed by John Wood the Younger around 1780.¹",
+   "DESCRIPTION": "Church Street, now Upper Church Street, was likely designed and constructed by John Wood the Younger around 1780.(1)",
    "REFERENCES": "1 - Historic England, 2 and 3, Upper Church Street, 1395470."
 },
  {
@@ -86,7 +86,7 @@
    "FROM": 1780,
    "TO": 1789,
    "DISPLAY_DATE": "c. 1780",
-   "DESCRIPTION": "Cathrine Place and Thomas Street were designed by John Wood the Younger and constructed around 1780.¹",
+   "DESCRIPTION": "Cathrine Place and Thomas Street were designed by John Wood the Younger and constructed around 1780.(1)",
    "REFERENCES": "1 - Haddon, Bath, p. 121."
 },
  {
@@ -95,26 +95,26 @@
    "FROM": 1767,
    "TO": 1767,
    "DISPLAY_DATE": "c. 1767",
-   "DESCRIPTION": "Margret Buildings, or sometimes Margret’s Buildings’ appear to have been constructed alongside Brock Street in 1767.¹",
+   "DESCRIPTION": "Margaret Buildings, or sometimes Margaret’s Buildings’ appear to have been constructed alongside Brock Street in 1767.(1)",
    "REFERENCES": "1 - Gadd, Georgian Summer, p. 101."
 },
  {
    "CODE": "CSL",
    "NAME": "Circus Stable Lane",
-   "FROM": null,
-   "TO": null,
-   "DISPLAY_DATE": "c. . 1766",
-   "DESCRIPTION": "Circus Stable Lane, today named Circus Mews, appears to have been designed by John Wood the Elder or Younger.¹"
+   "FROM": 1766,
+   "TO": 1766,
+   "DISPLAY_DATE": "c. 1766",
+   "DESCRIPTION": "Circus Stable Lane, today named Circus Mews, appears to have been designed by John Wood the Elder or Younger.(1)",
    "REFERENCES": "1 - Gadd, Georgian Summer, pp. 47-50."
 },
  {
    "CODE": "SBL",
    "NAME": "Stable Lane",
-   "FROM": 1770,
-   "TO": 1770,
-   "DISPLAY_DATE": "c. 1770",
+   "FROM": 1730,
+   "TO": 1739,
+   "DISPLAY_DATE": "c. 1730",
    "DESCRIPTION": "Stable Lane appears to have been developed around the same time as Queen’s Square, appearing on maps by the 1770s.",
-   "REFERENCES": ""
+   "REFERENCES": " "
 },
  {
    "CODE": "HTG",
@@ -122,7 +122,7 @@
    "FROM": 1734,
    "TO": 1734,
    "DISPLAY_DATE": "c. 1734",
-   "DESCRIPTION": "Chapel Row, also referred to as Wood Street, was designed and constructed by John Wood the Elder around 1734.¹",
+   "DESCRIPTION": "Chapel Row, also referred to as Wood Street, was designed and constructed by John Wood the Elder around 1734.(1)",
    "REFERENCES": "1 - Haddon, Bath, p. 120; Historic England, 7, 8 and 9, Chapel Row, 1395501."
 },
  {
@@ -132,16 +132,16 @@
    "TO": 1734,
    "DISPLAY_DATE": "c. 1730s",
    "DESCRIPTION": "Princes Street, also refered to as Little Princes Street, appears to have been constructed around the 1730s, at the same time as Queen Square and Chapel Row.",
-   "REFERENCES": ""
+   "REFERENCES": " "
 },
  {
    "CODE": "BTH",
    "NAME": "Old City",
    "FROM": 100,
    "TO": 100,
-   "DISPLAY_DATE": "c. 100",
-   "DESCRIPTION": "",
-   "REFERENCES": ""
+   "DISPLAY_DATE": "c. 1000s",
+   "DESCRIPTION": " ",
+   "REFERENCES": " "
 },
  {
    "CODE": "KJW",
@@ -149,7 +149,7 @@
    "FROM": 1727,
    "TO": 1729,
    "DISPLAY_DATE": "1727 - 1729",
-   "DESCRIPTION": "John Street was constructed in 1727, with the adjoining Old King Street, originally named King Street, and Wood Street being added in 1729, constructed on the site of the Barron Grounds.¹  The streets were designed by John Wood the Elder, with John and Wood streets bearing his names.²",
+   "DESCRIPTION": "John Street was constructed in 1727, with the adjoining Old King Street, originally named King Street, and Wood Street being added in 1729, constructed on the site of the Barron Grounds.(1)  The streets were designed by John Wood the Elder, with John and Wood streets bearing his names.(2)",
    "REFERENCES": "1 - Meehan, Famous Houses of Bath & District, p. 190.\n2 - Gadd, Georgian Summer, p. 51."
 },
  {
@@ -158,7 +158,511 @@
    "FROM": 1730,
    "TO": 1739,
    "DISPLAY_DATE": "c.1730",
-   "DESCRIPTION": "George Street was likely developed around the same period as Gay Street and the Circus. By the 1730s, some buildings had been developed on the street.¹ ",
+   "DESCRIPTION": "George Street was likely developed around the same period as Gay Street and the Circus. By the 1730s, some buildings had been developed on the street.(1) ",
    "REFERENCES": "1 - Meehan, Famous Houses of Bath & District, p. 190."
+},
+ {
+   "CODE": "MLS",
+   "NAME": "Milsom Street",
+   "FROM": 1763,
+   "TO": 1776,
+   "DISPLAY_DATE": "1763-1776",
+   "DESCRIPTION": "Milsom street had originally been the Rack Close for the stretching of weavers’ cloths from Broad Street, however, the it was cleared for expansion after 1763.(1) Construction continued to as late as winter of 1776.(2)",
+   "REFERENCES": "1 - Little, Bath Portrait, p. 60.\n2 - Meehan, Famous Houses of Bath & District, p. 191."
+},
+ {
+   "CODE": "QTS",
+   "NAME": "Quiet Street",
+   "FROM": 1729,
+   "TO": 1729,
+   "DISPLAY_DATE": "1729",
+   "DESCRIPTION": "Quiet Street was designed by John Wood the Elder and constructed in 1729.(1) Allegedly, it was named after the wife of the mason who worked on the street, who was apparently quiet.(2) The street was later widened in the 1870s.(3)",
+   "REFERENCES": "1 - Meehan, Famous Houses of Bath & District, p. 21.\n2 - ibid.\n2 - ibid."
+},
+ {
+   "CODE": "TRM",
+   "NAME": "Trim Street",
+   "FROM": 1707,
+   "TO": 1707,
+   "DISPLAY_DATE": "1729",
+   "DESCRIPTION": "Trim Street was laid in 1707 by George Trymme/Trim as one of the first development outside of the city walls in the 18th century.(1)",
+   "REFERENCES": "1 - Cunliffe, The City of Bath, pp. 119."
+},
+ {
+   "CODE": "BRT",
+   "NAME": "Barton Street",
+   "FROM": 1720,
+   "TO": 1729,
+   "DISPLAY_DATE": "c. 1720s",
+   "DESCRIPTION": "Barton Street was one of the earlier developments outside of the city walls during the 18th century. It was likely named after the Barton Farm Estate, which land was leased from by Robert Gay to John Wood the Elder in the 1720s for development.(1) It originally included the lower portion of Gay Street.(2)",
+   "REFERENCES": "1 - Davis & Bonsall, A History of Bath, p. 89.\n2 - ibid.\n2 - Haddon, Bath, p. 120."
+},
+ {
+   "CODE": "BND",
+   "NAME": "Bond Street",
+   "FROM": 1780,
+   "TO": 1789,
+   "DISPLAY_DATE": "c. 1780s",
+   "DESCRIPTION": "Bond street, now named Old Bond Street, was constructed in the 1780s as a set of six terraced houses and shop fronts.(1)",
+   "REFERENCES": "1 - Historic England, 5-10, Old Bond Street, 1396212."
+},
+ {
+   "CODE": "QNS",
+   "NAME": "Queen Street",
+   "FROM": 1730,
+   "TO": 1739,
+   "DISPLAY_DATE": "c. 1730s",
+   "DESCRIPTION": "Queen Street, initially include within John Street until around the 1780s, was likely created during the 1730s. They were likely constructed alongside the development in Queen’s Square and designed by John Wood the Elder. Buildings were developed around the street in the late 18th century.(1)",
+   "REFERENCES": "1 - Historic England, 11 and 11A, Queen Street, 1394575."
+},
+ {
+   "CODE": "BUR",
+   "NAME": "Burton Street",
+   "FROM": 1730,
+   "TO": 1739,
+   "DISPLAY_DATE": "c. 1730s",
+   "DESCRIPTION": "Burton Street was likely developed and designed by John Wood the Elder and developed during the 1730s, appearing on maps alongside Queen Square at the same time.",
+   "REFERENCES": " "
+},
+ {
+   "CODE": "SHA",
+   "NAME": "Walcot",
+   "FROM": 1000,
+   "TO": 1000,
+   "DISPLAY_DATE": "c. 1000s",
+   "DESCRIPTION": "Southgate likely dates back to the Anglo-Saxon period, with the name \" dwelling of the Welsh\", with the parish likely acting as a suburb of native Britons outside of the Anglo-Saxon City.(1) A row of houses had been constructed on the street in 1736 by John Wood the Elder.",
+   "REFERENCES": "1 - Haddon, Bath, p. 41.\n2 - Little, Bath Portrait, p. 52."
+},
+ {
+   "CODE": "SGT",
+   "NAME": "Southgate",
+   "FROM": 1000,
+   "TO": 1000,
+   "DISPLAY_DATE": "c. 1000s",
+   "DESCRIPTION": "Southgate street was likely created by Bishop John of Tours during his replanning of Bath in the 11th century.(1) It led to the only bridge crossing the River Avon in Bath until the opening of Pulteney Bridge in 1774. The street was named for its leading out of the southern gate of the city walls. Amery lane also appears to have existed alongside the street since at least the mid 1600s. During the 18th century, the street was sometimes called Horse Street in reference to the Horse Bath to its west.(2)",
+   "REFERENCES": "1 - Cunliffe, The City of Bath, pp. 84-85.\n2 - Haddon, Bath, pp. 75-76."
+},
+ {
+   "CODE": "BSM",
+   "NAME": "Bartlett Street, Stable Lane and Miles Court",
+   "FROM": 1768,
+   "TO": 1772,
+   "DISPLAY_DATE": "c. 1768 – c. 1772",
+   "DESCRIPTION": "Bartlett Street, Miles Court and Stable Lane, now integrated into Bartlett Street, appear to have designed and constructed by John Wood the Younger in conjunction with Alfred Street from 1768 to 1772.(1)",
+   "REFERENCES": "1 - Historic England, 1-7, Alfred Street, 1394108."
+},
+ {
+   "CODE": "ALF",
+   "NAME": "Alfred Street ",
+   "FROM": 1768,
+   "TO": 1772,
+   "DISPLAY_DATE": "1768 – 1772",
+   "DESCRIPTION": "Alfred Street was designed by John Wood the Younger, with construction beginning in 1768 and completing in 1772.(1)",
+   "REFERENCES": "1 - Historic England, 1-7, Alfred Street, 1394108."
+},
+ {
+   "CODE": "PTB",
+   "NAME": "Pulteney Bridge",
+   "FROM": 1769,
+   "TO": 1774,
+   "DISPLAY_DATE": "1769 - 1774",
+   "DESCRIPTION": "Pulteney Bridge began construction in 1769 on the orders of Sir William Pulteney, to connect estate in Bathwick to the city.(1) The bridge was designed by Robert Adam, who Pulteney had commissioned, along with further plans for the development of Pulteney’s Bathwick estate.(2)",
+   "REFERENCES": "1 - Haddon, Bath, p. 125.\n2 - Gadd, Georgian Summer, pp. 117-120."
+},
+ {
+   "CODE": "ARG",
+   "NAME": "Argyle Buildings",
+   "FROM": 1788,
+   "TO": 1789,
+   "DISPLAY_DATE": "1788 - 1789",
+   "DESCRIPTION": "The Argyle Buildings, now known as Argyle Street, were designed by Thomas Baldwin for the Bathwick estate of Sir William Pulteney. Construction began in 1788 alongside Laura Place, Pulteney Street and the surrounding developments.(1) Construction was completed around 1789.(2)",
+   "REFERENCES": "1 - Gadd, Georgian Summer, p. 120.\n2 - Historic England, 1-5, Argyle Street, 1394146."
+},
+ {
+   "CODE": "LAU",
+   "NAME": "Laura Place",
+   "FROM": 1788,
+   "TO": 1789,
+   "DISPLAY_DATE": "1788 – 1789",
+   "DESCRIPTION": "Laura Place, designed by Thomas Baldwin, began construction in 1788 and finished in 1789.(1) The street was named after Henrietta Laura Pulteney, the daughter of of Sir William Pulteney who had commissioned the construction on his Bathwick estate.(2)",
+   "REFERENCES": "1 - Little, Bath Portrait, p. 72.\n2 - Haddon, Bath, p. 126."
+},
+ {
+   "CODE": "GRO",
+   "NAME": "Grove Street",
+   "FROM": 1788,
+   "TO": 1788,
+   "DISPLAY_DATE": "c. 1788",
+   "DESCRIPTION": "Grove Street was one of the first developments across the Avon River which, alongside its prison, was designed by Robert Adam.(1)",
+   "REFERENCES": "1 - Haddon. Bath, p. 126; Little, Bath Portrait, p. 72."
+},
+ {
+   "CODE": "HEN",
+   "NAME": "Henrietta Street",
+   "FROM": 1795,
+   "TO": 1800,
+   "DISPLAY_DATE": "1795 – 1800",
+   "DESCRIPTION": "Henrietta Street was designed by Thomas Baldwin, with construction beginning in 1795 and completing in 1800.(1) It was likely named after Sir William Pulteney’s daughter Henrietta Laura Pulteney who had played a part in selecting Baldwin as the architect of Bathwick development.(2)",
+   "REFERENCES": "1 - Historic England, 6-19, Henrietta Street, 1395997.\n2 - Haddon, Bath, p. 126.."
+},
+ {
+   "CODE": "GPS",
+   "NAME": "Great Pulteney Street",
+   "FROM": 1788,
+   "TO": 1799,
+   "DISPLAY_DATE": "1788 - c. 1790s",
+   "DESCRIPTION": "Great Pulteney Street was designed by Thomas Baldwin, with construction beginning in 1788 and completing sometime in the 1790s.(1)",
+   "REFERENCES": "1 - Haddon, Bath, p. 126; Historic England, 42-45, Great Pulteney Street, 1396225."
+},
+ {
+   "CODE": "DAN",
+   "NAME": "Daniel Street",
+   "FROM": 1788,
+   "TO": 1819,
+   "DISPLAY_DATE": "1788 - c. 1810s",
+   "DESCRIPTION": "Daniel Street was designed by Thomas Baldwin, with construction beginning in 1788 and completing sometime in the 1810s.(1)",
+   "REFERENCES": "1 - Historic England, 1-18, Daniel Street, 1395056."
+},
+ {
+   "CODE": "BWS",
+   "NAME": "Bathwick Street",
+   "FROM": 1788,
+   "TO": 1799,
+   "DISPLAY_DATE": "1788 – c. 1790s",
+   "DESCRIPTION": "Bathwick Street was designed by Thomas Baldwin, with construction beginning in 1788 and completing some time in the 1790s.(1) It was part of the Bathwick development, ordered by Sir William Pulteney.",
+   "REFERENCES": "1 - Haddon, Bath, p. 126; Cunliffe, The City of Bath, p. 139. "
+},
+ {
+   "CODE": "FRA",
+   "NAME": "Frances Street",
+   "FROM": 1788,
+   "TO": 1799,
+   "DISPLAY_DATE": "1788 – c. 1790s",
+   "DESCRIPTION": "Frances Street, today Sutton Street, was designed and developed Thomas Baldwin, with construction beginning in 1788 and completing sometime in the 1790s.(1) It was likely named after Frances Pulteney, wife of Sir William Pulteney who had ordered the development of his Bathwick estate.",
+   "REFERENCES": "1 - Cunliffe, The City of Bath, p. 139."
+},
+ {
+   "CODE": "SYD",
+   "NAME": "Sydney Place and Gardens",
+   "FROM": 1791,
+   "TO": 1796,
+   "DISPLAY_DATE": "1791 - 1796",
+   "DESCRIPTION": "Sydney Gardens began construction in 1791, on the orders of Henrietta Laura Pulteney, and opened in 1795.(1) Sydney Place had been designed by Thomas Baldwin, however, he was only able to complete a single terrace before his bankruptcy in the 1793, with 1-12 Sydney Place being completed by 1796.(2)",
+   "REFERENCES": "1 - Haddon, Bath, p. 126.\n2-Historic England, 1 to 12, Sydney Place, and Attached Railings and Gates, 1395298."
+},
+ {
+   "CODE": "ORC",
+   "NAME": "Orchard Street",
+   "FROM": 1710,
+   "TO": 1719,
+   "DISPLAY_DATE": "c. 1710",
+   "DESCRIPTION": "Orchard Street was one of the first developments outside of the old city walls during the 18th century, being created around the 1710s.(1)",
+   "REFERENCES": "1 - Cunliffe, The City of Bath, p. 117. "
+},
+ {
+   "CODE": "NPR",
+   "NAME": "North Parade",
+   "FROM": 1739,
+   "TO": 1748,
+   "DISPLAY_DATE": "1739 - 1748",
+   "DESCRIPTION": "North Parade, initially named Grand Parade, was designed by John Wood the Elder to replace the Abbey Orchards.(1) Construction began in 1739, in conjunction with South Parade, and was finished by 1748.(2)",
+   "REFERENCES": "1 - Gadd, Georgian Summer, p. 46. \n2 - ibid."
+},
+ {
+   "CODE": "SPR",
+   "NAME": "South Parade",
+   "FROM": 1739,
+   "TO": 1748,
+   "DISPLAY_DATE": "1739-1748",
+   "DESCRIPTION": "South Parade was designed by John Wood the Elder to replace the Abbey Orchards.(1) Construction began in 1739, in conjunction with North Parade, and was finished by 1748.(2) Wood had initially planned to construct a Royal Forum however plans fell though.(3)",
+   "REFERENCES": "1 - Gadd, Georgian Summer, p. 46.\n2 - ibid.\n3 - Little, Bath Portrait, p. 50"
+},
+ {
+   "CODE": "PRP",
+   "NAME": "Pierrepont Street",
+   "FROM": 1739,
+   "TO": 1748,
+   "DISPLAY_DATE": "1739-1748",
+   "DESCRIPTION": " Pierrepont Street was constructed in conjunction with North and South Parade from 1739 to 1748 to act as a cross street for the two developments alongside Duke Street.(1)",
+   "REFERENCES": "1 - Gadd, Georgian Summer, p. 46."
+},
+ {
+   "CODE": "DUK",
+   "NAME": "Duke Street",
+   "FROM": 1739,
+   "TO": 1748,
+   "DISPLAY_DATE": "1739 - 1748",
+   "DESCRIPTION": "Duke Street was constructed in conjunction with North and South Parade from 1739 to 1748 to act as a cross street for the two developments alongside Pierrepont Street.(1)",
+   "REFERENCES": "1 - Gadd, Georgian Summer, p. 46."
+},
+ {
+   "CODE": "NMR",
+   "NAME": "New Markey Row",
+   "FROM": 1770,
+   "TO": 1779,
+   "DISPLAY_DATE": "c. 1770s",
+   "DESCRIPTION": "New Markey Row, today named Grand Parade, was constructed around the 1770s.",
+   "REFERENCES": " "
+},
+ {
+   "CODE": "CLK",
+   "NAME": "Clarks Lane",
+   "FROM": 1765,
+   "TO": 1768,
+   "DISPLAY_DATE": "c. 1765 - c. 1768",
+   "DESCRIPTION": "Clarks Street, also referred to as Clarks Lane, was likely developed in conjunction with St. James’s Parade from 1765-1768. This development was headed by Richard Jones, Thomas Jelly and Henry Fisher after being given permission to take down the old city walls next to Amery Lane.(1)",
+   "REFERENCES": "1 - Historic England, 31-40, St.James’s Parade, 1394835."
+},
+ {
+   "CODE": "BCK",
+   "NAME": "Back Street",
+   "FROM": 1765,
+   "TO": 1768,
+   "DISPLAY_DATE": "c. 1765 - c. 1768",
+   "DESCRIPTION": "Back Street was likely developed in conjunction with St. James’s Parade from 1765-1768. This development was headed by Richard Jones, Thomas Jelly and Henry Fisher after being given permission to take down the old city walls next to Amery Lane.(1)",
+   "REFERENCES": "1 - Historic England, 31-40, St.James’s Parade, 1394835."
+},
+ {
+   "CODE": "GRD",
+   "NAME": "Gerrard Street",
+   "FROM": 1765,
+   "TO": 1768,
+   "DISPLAY_DATE": "c. 1765 - c. 1768",
+   "DESCRIPTION": "Gerrard Street, later referred to as Somerset Street, was likely developed in conjunction with St. James’s Parade from 1765-1768. This development was headed by Richard Jones, Thomas Jelly and Henry Fisher after being given permission to take down the old city walls next to Amery Lane.(1)",
+   "REFERENCES": "1 - Historic England, 31-40, St.James’s Parade, 1394835."
+},
+ {
+   "CODE": "KEY",
+   "NAME": "The Quay",
+   "FROM": 1730,
+   "TO": 1739,
+   "DISPLAY_DATE": "c. 1730s",
+   "DESCRIPTION": "The development of the Quay, or the Key, was funded by Bristol timber merchant John Hobbs who also invited John Strahan to design buildings to develop the area around the Quay.(1)",
+   "REFERENCES": "1 - Cunliffe, The City of Bath, p. 127; Little, Bath Portrait, p. 53."
+},
+ {
+   "CODE": "WGB",
+   "NAME": "Westgate Buildings",
+   "FROM": 1760,
+   "TO": 1769,
+   "DISPLAY_DATE": "c. 1760",
+   "DESCRIPTION": "The West Gate buildings were constructed in the 1760s after the demolition of the still existing city walls.(1) They were likely named after the west gate of the old city walls, which they were constructed adjacent to.",
+   "REFERENCES": "1 - Cunliffe, The City of Bath, p. 119."
+},
+ {
+   "CODE": "SJP",
+   "NAME": "St James’s Parade",
+   "FROM": 1765,
+   "TO": 1768,
+   "DISPLAY_DATE": "1765 - 1768",
+   "DESCRIPTION": " St James’s Parade, original named Thomas Street likely after Thomas Jelly, was constructed from 1765 to 1768. It was part of a development of the area carried out by Richard Jones, Thomas Jelly and Henry Fisher from 1765 onwards after being given permission to take down the old city walls next to Amery Lane. The houses on the street were likely designed by Thomas Jelly and John Palmer.(1)",
+   "REFERENCES": "1 - Historic England, 31-40, St.James’s Parade, 1394835."
+},
+ {
+   "CODE": "PTR",
+   "NAME": "Peter Street",
+   "FROM": 1765,
+   "TO": 1768,
+   "DISPLAY_DATE": "c. 1765 - c. 1768",
+   "DESCRIPTION": "Peter Street, earlier referred to as Lower Queen Street, was likely developed in conjunction with St. James’s Parade from 1765-1768. This development was headed by Richard Jones, Thomas Jelly and Henry Fisher after being given permission to take down the old city walls next to Amery Lane.(1)",
+   "REFERENCES": "1 - Historic England, 31-40, St.James’s Parade, 1394835."
+},
+ {
+   "CODE": "CRN",
+   "NAME": "Corn Street",
+   "FROM": 1765,
+   "TO": 1768,
+   "DISPLAY_DATE": "c. 1765 - c. 1768",
+   "DESCRIPTION": "Corn Street was likely developed in conjunction with St. James’s Parade from 1765-1768. This development was headed by Richard Jones, Thomas Jelly and Henry Fisher after being given permission to take down the old city walls next to Amery Lane.(1)",
+   "REFERENCES": "1 - Historic England, 31-40, St.James’s Parade, 1394835."
+},
+ {
+   "CODE": "VNO",
+   "NAME": "Wine Street",
+   "FROM": 1765,
+   "TO": 1768,
+   "DISPLAY_DATE": "c. 1765 - c. 1768",
+   "DESCRIPTION": "Wine Street, was likely developed in conjunction with St. James’s Parade from 1765-1768. This development was headed by Richard Jones, Thomas Jelly and Henry Fisher after being given permission to take down the old city walls next to Amery Lane.(1)",
+   "REFERENCES": "1 - Historic England, 31-40, St.James’s Parade, 1394835."
+},
+ {
+   "CODE": "AVN",
+   "NAME": "Avon Street",
+   "FROM": 1727,
+   "TO": 1736,
+   "DISPLAY_DATE": "1727 - 1736",
+   "DESCRIPTION": "Avon street, named after the River Avon which the street led to, was designed by John Strahan.(1) Construction began in 1727 as part of the Kingsmead development, alongside Kingsmead Square and Street, and others, and finished in 1736.(2) It was one of the first large developments outside of the original city walls in the 18th century, intended as lodging, however it quickly lost favour to Queen Square upon its completion.(3) The development eventually came to house the lower class residents of Bath, alongside the rest of the Kingsmead development.(4)",
+   "REFERENCES": "1 - Davis & Bonsall, A History of Bath, p. 78; Haddon, Bath, p. 118.\n2 - Cunliffe, The City of Bath, p. 125.\n3 - Davis & Bonsall, A History of Bath, p. 110.\n4 - Cunliffe, The City of Bath, p. 134."
+},
+ {
+   "CODE": "KMQ",
+   "NAME": "Kingsmead Square",
+   "FROM": 1727,
+   "TO": 1736,
+   "DISPLAY_DATE": "1727 - 1736",
+   "DESCRIPTION": "Kingsmead Square, also written as King’s Mead Square, was designed by John Strahan.(1) Construction began in 1727 as part of the Kingsmead development, alongside Kingsmead Street, Avon Street and others, and finished in 1736.(2) The development was primarily made up of terraced houses, which eventually came to house the lower class residents of Bath, alongside the rest of the Kingsmead development.(3) The square’s name was likely derived from a commons area named Kingsmead meadows, which the new development was constructed on top of.(4) Almost nothing of the original Kingsmead Square now remains.(5)",
+   "REFERENCES": "1 - Gadd, Georgian Summer, p. 51.\n2 - Cunliffe, The City of Bath, p. 125.\n3 - ibid., p. 134.\n4 - Haddon, Bath, p. 59.\n5 - Gadd, Georgian Summer, p. 51."
+},
+ {
+   "CODE": "KMS",
+   "NAME": "Kingsmead Street",
+   "FROM": 1727,
+   "TO": 1736,
+   "DISPLAY_DATE": "1727 - 1736",
+   "DESCRIPTION": "Kingsmead Street, also written as King’s Mead Street, was designed by John Strahan. Construction began in 1727 as part of the Kingsmead development, alongside Kingsmead Square, Avon Street and others, and finished in 1736.(1) The development was primarily made up of terraced houses, which eventually came to house the lower class residents of Bath, alongside the rest of the Kingsmead development.(2) The street’s name was likely derived from a commons area named Kingsmead meadows.(3) Almost nothing of the original Kingsmead Street now remains.",
+   "REFERENCES": "1 - Gadd, Georgian Summer, p. 51;  Cunliffe, The City of Bath, p. 125.\n2 - ibid., p. 134.\n3 - Haddon, Bath, p. 59."
+},
+ {
+   "CODE": "MMS",
+   "NAME": "Monmouth Street",
+   "FROM": 1727,
+   "TO": 1736,
+   "DISPLAY_DATE": "1727 - 1736",
+   "DESCRIPTION": "Monmouth Street, originally part of Bristol Road, was designed by John Strahan.(1) Construction began in 1727 as part of the Kingsmead development, alongside Kingsmead Square, Avon Street and others, and finished in 1736.(2) The development was primarily made up of terraced houses, which eventually came to house the lower class residents of Bath, alongside the rest of the Kingsmead development.(3)",
+   "REFERENCES": "1 - Little, Bath Portrait, p. 53. \n2 - Gadd, Georgian Summer, p. 51;  Cunliffe, The City of Bath, p. 125.\n3 - ibid., p. 134."
+},
+ {
+   "CODE": "JNC",
+   "NAME": "St. John’s Court",
+   "FROM": 1710,
+   "TO": 1719,
+   "DISPLAY_DATE": "c. 1710s",
+   "DESCRIPTION": "St. John’s Court, also referred to as John Court, was designed and built by Thomas Greenway in the 1710s, with some houses designed by William Killingrew.(1) It was likely named for the opposite St. John’s Hospital.",
+   "REFERENCES": "1 - Gadd, Georgian Summer, p. 51; Little, Bath Portrait, p. 38. "
+},
+ {
+   "CODE": "BEA",
+   "NAME": "Beaufort Square",
+   "FROM": 1730,
+   "TO": 1739,
+   "DISPLAY_DATE": "c. 1730s",
+   "DESCRIPTION": " Beaufort, or sometimes Beauford, Square was designed by John Strahan and constructed in the 1730s.(1)",
+   "REFERENCES": "1 -  Little, Bath Portrait, p. 53; Gadd, Georgian Summer, p. 51; Cunliffe, The City of Bath, p. 171."
+},
+ {
+   "CODE": "CHL",
+   "NAME": "Charles Street",
+   "FROM": 1727,
+   "TO": 1736,
+   "DISPLAY_DATE": "c. 1727 - c. 1736",
+   "DESCRIPTION": "Charles Street, initially under a different name, was likely constructed between 1727 and 1736 as part of the Kingsmead development, alongside Kingsmead Street, Monmouth Street and others.(1)",
+   "REFERENCES": "1 - Cunliffe, The City of Bath, p. 125."
+},
+ {
+   "CODE": "SYM",
+   "NAME": "Seymour Street",
+   "FROM": 1790,
+   "TO": 1799,
+   "DISPLAY_DATE": "c. 1790s",
+   "DESCRIPTION": "Seymour Street was constructed around the 1790s along with early parts of Green Park.64",
+   "REFERENCES": "1 - Little, Bath Portrait, p. 76."
+},
+ {
+   "CODE": "MLK",
+   "NAME": "Milk Street",
+   "FROM": 1760,
+   "TO": 1769,
+   "DISPLAY_DATE": "c. 1760s",
+   "DESCRIPTION": "Milk Street began construction in the late 1760s.(1)",
+   "REFERENCES": "1 - Mason & Mepham, ‘Industry Commerce and the Urban Poor’."
+},
+ {
+   "CODE": "KMT",
+   "NAME": "Kingsmead Terrace",
+   "FROM": 1792,
+   "TO": 1792,
+   "DISPLAY_DATE": "1792",
+   "DESCRIPTION": "Kingsmead Terrace was constructed in 1792.(1)",
+   "REFERENCES": "1 - Cunliffe, The City of Bath, p. 139."
+},
+ {
+   "CODE": "JMS",
+   "NAME": "James Street",
+   "FROM": 1760,
+   "TO": 1767,
+   "DISPLAY_DATE": "c. 1760 - c. 1767",
+   "DESCRIPTION": "James Street was likely created sometime between 1760 and 1767.(1)",
+   "REFERENCES": "Bath, B&NES Record Office, BC/6/2/9/747/1, Conveyance by lease and release, 29/30 October 1767."
+},
+ {
+   "CODE": "GPK",
+   "NAME": "Green Park",
+   "FROM": 1790,
+   "TO": 1808,
+   "DISPLAY_DATE": "1790 - 1808",
+   "DESCRIPTION": "Green Park was designed by John Palmer and began construction in 1790, finishing in 1808.(1)",
+   "REFERENCES": "1 - Haddon, Bath, p. 131."
+},
+ {
+   "CODE": "GRE",
+   "NAME": "Green Street",
+   "FROM": 1710,
+   "TO": 1719,
+   "DISPLAY_DATE": "c. 1710s",
+   "DESCRIPTION": "Green Street was one of the earliest developments in Bath during the 18th century, being constructed during the 1710s.(1)",
+   "REFERENCES": "1 - Gadd, Georgian Summer, p. 37."
+},
+ {
+   "CODE": "NKS",
+   "NAME": "New King Street",
+   "FROM": 1764,
+   "TO": 1770,
+   "DISPLAY_DATE": "1764 - 1770",
+   "DESCRIPTION": "New King Street was constructed between 1764 and 1770 as a collection of terraced houses built by John Ford, Thomas Jelly and James Coleman.(1)",
+   "REFERENCES": "1 - Historic England, No. 28 and Attached Railings, 1396278."
+},
+ {
+   "CODE": "RIV",
+   "NAME": "River Street",
+   "FROM": 1780,
+   "TO": 1786,
+   "DISPLAY_DATE": "c. 1780 - c. 1786",
+   "DESCRIPTION": "River Street appears to have been developed some time between 1780 and 1786 based on maps from the period.",
+   "REFERENCES": " "
+},
+ {
+   "CODE": "NFC",
+   "NAME": "Norfolk Crescent",
+   "FROM": 1795,
+   "TO": 1820,
+   "DISPLAY_DATE": "1795 - 1820",
+   "DESCRIPTION": "The Norfolk Crescent, initially planned in 1793, was developed between 1795 and 1820 by John Palmer.(1) Construction was halted during and then continued after the Napoleonic Wars leading to its 25 year construction period.(2)",
+   "REFERENCES": "1 - Haddon, Bath, p. 131.\n2 - Little, Bath Portrait, p. 81; Haddon, Bath, p. 131."
+},
+ {
+   "CODE": "NFS",
+   "NAME": "Norfolk Street",
+   "FROM": 1795,
+   "TO": 1820,
+   "DISPLAY_DATE": "c. 1795 - c. 1820",
+   "DESCRIPTION": "Norfolk Street, now Nile Street, was likely developed at the same time as the Norfolk Crescent by John Palmer.(1) It was later renamed for Admiral Nelson’s Battle of the Nile.(2)",
+   "REFERENCES": "1 - Haddon, Bath, p. 131.\n2 - Haddon, Bath, p. 131."
+},
+ {
+   "CODE": "SMS",
+   "NAME": "Somerset Place",
+   "FROM": 1790,
+   "TO": 1820,
+   "DISPLAY_DATE": "c. 1790 - 1820",
+   "DESCRIPTION": "Somerset Place was designed by John Eveleigh, with construction beginning around 1790 and completing in 1820.(1) The central terrace of buildings was completed in 1793.(2)",
+   "REFERENCES": "1 - Gadd, Georgian Summer, p. 133.\n2 - Haddon, Bath, p. 130."
+},
+ {
+   "CODE": "LDC",
+   "NAME": "Lansdown Crescent",
+   "FROM": 1789,
+   "TO": 1793,
+   "DISPLAY_DATE": "1789 - 1793",
+   "DESCRIPTION": "The Lansdown Crescent, also refered to as Lansdown Place, was designed by John Palmer, with construction beginning in 1789, continuing alongside St. James’s Square, and completing in 1793.(1)",
+   "REFERENCES": "1 - Haddon, Bath, pp.128-129."
+},
+ {
+   "CODE": "CDC",
+   "NAME": "Camden Crescent",
+   "FROM": 1788,
+   "TO": 1788,
+   "DISPLAY_DATE": "1788",
+   "DESCRIPTION": " The Camden Crescent, also refered to as Camden Place, was designed by John Eveleigh and constructed in 1788.(1)",
+   "REFERENCES": "1 - Haddon, Bath, p. 130."
 }
 ]
