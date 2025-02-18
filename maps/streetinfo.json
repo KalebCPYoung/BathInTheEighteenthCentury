@@ -136,12 +136,12 @@
 },
  {
    "CODE": "BTH",
-   "NAME": "Old City",
-   "FROM": 100,
-   "TO": 100,
-   "DISPLAY_DATE": "c. 1000s",
-   "DESCRIPTION": " ",
-   "REFERENCES": " "
+   "NAME": "City Centre",
+   "FROM": 76,
+   "TO": 76,
+   "DISPLAY_DATE": "c. 76",
+   "DESCRIPTION": "Bath had first been developed by the Romans in c. 76 as Aquae Sulis, during which time they developed one of Baths two key structures, the Roman Baths.(1)  The city gained a royal charter in 1189.(2) The modern Bath Abbey was then constructed between 1499 and 1616, the second of the key buildings.(3)",
+   "REFERENCES": "1 - Little, Bath Portrait, p. 4.\n2 - ibid. 8\n3 - Haddon, Bath, 52"
 },
  {
    "CODE": "KJW",
@@ -230,7 +230,7 @@
    "FROM": 1000,
    "TO": 1000,
    "DISPLAY_DATE": "c. 1000s",
-   "DESCRIPTION": "Southgate likely dates back to the Anglo-Saxon period, with the name \" dwelling of the Welsh\", with the parish likely acting as a suburb of native Britons outside of the Anglo-Saxon City.(1) A row of houses had been constructed on the street in 1736 by John Wood the Elder.",
+   "DESCRIPTION": "Walcot likely dates back to the Anglo-Saxon period, with the name \" dwelling of the Welsh\", with the parish likely acting as a suburb of native Britons outside of the Anglo-Saxon City.(1) A row of houses had been constructed on the street in 1736 by John Wood the Elder.(2)",
    "REFERENCES": "1 - Haddon, Bath, p. 41.\n2 - Little, Bath Portrait, p. 52."
 },
  {
