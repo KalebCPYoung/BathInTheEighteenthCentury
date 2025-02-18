@@ -1,295 +1,289 @@
 <html>
-   <head>
-      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-      <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-      <title>Bath in the 18th Century</title>
-      <pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="4" height="4">
-         <path d="M-1,1 l2,-2
-            M0,4 l4,-4
-            M3,5 l2,-2" 
-            style="stroke:black; stroke-width:1" />
-      </pattern>
-   </head>
-   <body>
-      <font size="6" style="font-family:verdana">
-         <center><strong>Bath in the 18th Century</strong></center>
-      </font>
-      <center>
-         <div style="display: flex; width: 96vw; margin: 2vw; gap: 2vw;">
-         <style>
-            #mapSelectionContainer {
-            width: 19vw;
-            height: 38vh;
-            border: 5px solid black;
-            border-radius: 10px;
-            overflow: hidden;
-            display: inline-block;
-            }
-         </style>
-         <div style="width: 23vw;row-gap: 2vw;"" >
-            <div id="mapSelectionContainer"style="width: 19vw;">
-               <font size="3" style="font-family:verdana">
-               <b>Map Selection</b><br>
-               </font>
-               <font size="2.5" style="font-family:verdana">
-                  <p align="left">
-                     <input type="radio" id="map1695radio" name="mapselection" value="map1695radio"
-                        onchange="if (map1695radio.checked){ removemaps(); map1695.addTo(displaymap);}" checked>
-                     <label for="map1695radio">1695 Joseph Gilmore Map</label><br>
-                     <input type="radio" id="map1735radio" name="mapselection" value="map1735radio"
-                        onchange="if (map1735radio.checked){ removemaps(); map1735.addTo(displaymap);}">
-                     <label for="map1735radio">1735 John Wood Map</label><br>
-                     <input type="radio" id="map1780radio" name="mapselection" value="map1780radio"
-                        onchange="if (map1780radio.checked ){ removemaps(); map1780.addTo(displaymap);}">
-                     <label for="map1780radio">1780 Frederick Taylor Map</label><br>
-                     <input type="radio" id="map1795radio" name="mapselection" value="map1795radio"
-                        onchange="if (map1795radio.checked){ removemaps(); map1795.addTo(displaymap);}">
-                     <label for="map1795radio">1795 Harcourt Masters Map</label><br>
-                     <input type="radio" id="map1810radio" name="mapselection" value="map1810radio"
-                        onchange="if (map1810radio.checked){ removemaps(); map1810.addTo(displaymap);}">
-                     <label for="map1810radio">1810 B. Donne Map</label><br>
-                     <input type="radio" id="map2025radio" name="mapselection" value="map2025radio" checked=true
-                        onchange="if (map2025radio.checked ){ removemaps(); map2025.addTo(displaymap);}">
-                     <label for="map2025radio">Open Street Map</label><br>
-                  </p>
-               </font>
-            </div>
-            <br><br>
-            <div id="mapSelectionContainer"style="width: 19vw;" >
-               <font size="3" style="font-family:verdana">
-               <b>Map Selection<br>(High-Contrast)</b><br>
-               </font>
-               <font size="2.5" style="font-family:verdana">
-                  <p align="left">
-                     <input type="radio" id="map1695hcradio" name="mapselection" value="map1695hcradio"
-                        onchange="if (map1695hcradio.checked){ removemaps(); map1695hc.addTo(displaymap);}">
-                     <label for="map1695hcradio">1695 Joseph Gilmore Map</label><br>
-                     <input type="radio" id="map1735hcradio" name="mapselection" value="map1735hcradio"
-                        onchange="if (map1735hcradio.checked){ removemaps(); map1735hc.addTo(displaymap);}">
-                     <label for="map1735hcradio">1735 John Wood Map</label><br>
-                     <input type="radio" id="map1780hcradio" name="mapselection" value="map1780hcradio" 
-                        onchange="if (map1780hcradio.checked ){ removemaps(); map1780hc.addTo(displaymap);}">
-                     <label for="map1780hcradio">1780 Frederick Taylor Map</label><br>
-                     <input type="radio" id="map1795hcradio" name="mapselection" value="map1795hcradio"
-                        onchange="if (map1795hcradio.checked){ removemaps(); map1795hc.addTo(displaymap);}">
-                     <label for="map1795hcradio">1795 Harcourt Masters Map</label><br>
-                     <input type="radio" id="map1810hcradio" name="mapselection" value="map1810hcradio"
-                        onchange="if (map1810hcradio.checked){ removemaps(); map1810hc.addTo(displaymap);}">
-                     <label for="map1810hcradio">1810 B. Donne Map</label><br>
-                  </p>
-               </font>
-            </div>
-            </font>
-         </div>
-         <div style="width;: 46vw">
-            <style>
-               #mapContainer {
-               width: 50vw;
-               height: 80vh;
-               border: 5px solid black;
-               border-radius: 10px;
-               overflow: hidden;
-               display: inline-block;
-            </style>
-            <div class="column" id="mapContainer"></div>
-         </div>
-         <div style="width: 23vw">
-            <style>
-               #streetInfoContainer {
-               width: 19vw;
-               height: 80vh;
-               border: 5px solid black;
-               border-radius: 10px;
-               overflow: hidden;
-               display: inline-block;
-               padding: 0 10px;
-               }
-            </style>
-            <div id="streetInfoContainer">
-               <font size="3" style="font-family:verdana">
-               <b><span id="streetNameBox"></span> </b><br>
-               <b><span id="streetDateBox"></span> </b><br>
-               <font>
-               <p align="justify">
-                  <font size="2.5" style="font-family:verdana">
-                  <span id="streetInfoBox"></span><br><br>
-               <p align="left">
-                  <span id="streetInfoReferencesBox"></span>
-                  <font>
-               </p>
-            </div>
-         </div>
-      </center>
-      <font size="4" style="font-family:verdana">
-         <center>
-            <span id="yearSelection">1700</span>
-         </center>
-         <center>
-         <div class="slidecontainer" style="width: 80vw">
-            <b>1700</b>
-            <input type="range" min="1700" max="1800" value="1700" 
-               style="width: 46vw" list="tickmarks"
-               onchange="document.getElementById('yearSelection').innerText = this.value; selectedyear=this.value; updateStreets();">
-            <datalist id="tickmarks">
-               <option value="1700"></option>
-               <option value="1710"></option>
-               <option value="1720"></option>
-               <option value="1730"></option>
-               <option value="1740"></option>
-               <option value="1750"></option>
-               <option value="1760"></option>
-               <option value="1770"></option>
-               <option value="1780"></option>
-               <option value="1790"></option>
-               <option value="1800"></option>
-            </datalist>
-            <b>1800</b>
-         </div>
-      </font>
-   </body>
-   <script>
-      var selectedyear = 1700;
-      ///////////////
-      // MAP CLASS //
-      ///////////////
-      class Map {
-      	constructor(name, file, bounds) {
-      		this.name = name;
-      		this.file = file;
-      	}
-      }
-      
-      //////////
-      // MAPS //
-      //////////
-      //Open Street Map
-      var map2025 = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'})
-      
-      //1695 Joseph Gilmore Map
-      var map1695 = L.imageOverlay("maps/map1695.png", [[51.38761194,-2.36718729], [51.37549424,-2.35312669]]);
-      var map1695hc = L.imageOverlay("maps/map1695hc.png", [[51.38761194,-2.36718729], [51.37549424,-2.35312669]]);
-      
-      //1735 John Wood Map
-      var map1735 = L.imageOverlay("maps/map1735.png", [[51.3884394, -2.3697282], [51.37379693, -2.34973871]]);
-      var map1735hc = L.imageOverlay("maps/map1735hc.png", [[51.3884394, -2.3697282], [51.37379693, -2.34973871]]);
-      
-      //1780 Fredrik Taylor Map
-      var map1780 = L.imageOverlay("maps/map1780.png", [[51.39224555,-2.37245608], [51.37626566,-2.35032289]]);
-      var map1780hc = L.imageOverlay("maps/map1780hc.png", [[51.39224555,-2.37245608], [51.37626566,-2.35032289]]);
-      
-      //c.1795 Harcourt Masters Map
-      var map1795 = L.imageOverlay("maps/map1795.png", [[51.39414584,-2.37656393], [51.372888826,-2.348713179]]);
-      var map1795hc = L.imageOverlay("maps/map1795hc.png", [[51.39414584,-2.37656393], [51.372888826,-2.348713179]]);
-      
-      //Map of Bath B. Donne 1810
-      var map1810 = L.imageOverlay("maps/map1810.png", [[51.3960249,-2.3726466], [51.3747002,-2.3415184]]);
-      var map1810hc = L.imageOverlay("maps/map1810hc.png", [[51.3960249,-2.3726466], [51.3747002,-2.3415184]]);
-      
-      //Streets 
-      var streetData = [];
-      var streetsLayer;
-      
-      fetch("maps/streetinfo.json")
-      	.then(res => res.json())
-      	.then(data => {
-      		console.log(data)
-      		streetData = data;
-      	});
-      function updateStreets() {
-      	if (streetsLayer) {
-      			streetsLayer.clearLayers();
-      	}
-      	fetch("maps/streets.geojson")
-      		.then(res => res.json())
-      		.then(data => {
-      			streetsLayer = L.geoJSON(data, {
-      				style: { color: "red", weight: 2 },
-      				onEachFeature: function (feature, layer) {
-      					const streetid = feature.properties.id;
-      					if (Array.isArray(streetData)) {
-      						console.log(streetid)
-      							const street = streetData.find(item => item.CODE === streetid);
-      							if (street.TO < selectedyear) {
-      									layer.setStyle({ fillOpacity: 0.25}); 
-      							}
-      							else if (street.TO >= selectedyear && street.FROM <= selectedyear) {
-      									layer.setStyle({ fillOpacity: 0.25, dashArray: "5, 5"}); 
-      									
-      							} else {
-      									layer.setStyle({ fillOpacity: 0, opacity :0 });
-      							}
-      						}
-      					layer.on("click", function () {
-      						if (Array.isArray(streetData)) {
-      							const street = streetData.find(item => item.CODE === streetid);
-      							if (street) {
-      								document.getElementById("streetNameBox").innerText = `${street.NAME}` || '';
-      								document.getElementById("streetDateBox").innerText = `(${street.DISPLAY_DATE})` || '';
-      								document.getElementById("streetInfoBox").innerText = street.DESCRIPTION || '';
-      								document.getElementById("streetInfoReferencesBox").innerText = street.REFERENCES || '';
-      							}
-      						}
-      					});
-      				}
-      			}).addTo(displaymap);
-      		});
-      }
-      
-      //Clear all maps
-      function removemaps() {
-      	if (displaymap.hasLayer(map1695)) {
-      		displaymap.removeLayer(map1695);
-      	}
-      		else if (displaymap.hasLayer(map1695hc)) {
-      			displaymap.removeLayer(map1695hc);
-      		}
-      	else if (displaymap.hasLayer(map1735)) {
-      		displaymap.removeLayer(map1735);
-      	}
-      	else if (displaymap.hasLayer(map1735hc)) {
-      		displaymap.removeLayer(map1735hc);
-      	}
-      	else if (displaymap.hasLayer(map1780)) {
-      		displaymap.removeLayer(map1780);
-      	}
-      	else if (displaymap.hasLayer(map1780hc)) {
-      		displaymap.removeLayer(map1780hc);
-      	}
-      	else if (displaymap.hasLayer(map1795)) {
-      		displaymap.removeLayer(map1795);
-      	}
-      	else if (displaymap.hasLayer(map1795hc)) {
-      		displaymap.removeLayer(map1795hc);
-      	}
-      	else if (displaymap.hasLayer(map1810)) {
-      		displaymap.removeLayer(map1810);
-      	}
-      	else if (displaymap.hasLayer(map1810hc)) {
-      		displaymap.removeLayer(map1810hc);
-      	}
-      	else if (displaymap.hasLayer(map2025)) {
-      		displaymap.removeLayer(map2025);
-      	}
-      }
-      
-      
-      
-      
-      
-      
-      
-      //////////
-      // MAIN //
-      //////////
-      //Setup
-      const displaymap = L.map("mapContainer").setView([51.3810, -2.3590], 14);
-      
-      //default map
-      map2025.addTo(displaymap);
-      updateStreets();
-      displaymap.dragging.enable();
-      displaymap.scrollWheelZoom.enable();
-      displaymap.setMinZoom(14);
-      displaymap.setMaxZoom(18);
-   </script>
+
+<head>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+	<title>Bath in the 18th Century</title>
+	<pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="4" height="4">
+		<path d="M-1,1 l2,-2
+						M0,4 l4,-4
+						M3,5 l2,-2" style="stroke:black; stroke-width:1" />
+	</pattern>
+</head>
+
+<body>
+	<font size="6" style="font-family:verdana">
+		<center><strong>Bath in the 18th Century</strong></center>
+	</font>
+	<center>
+		<div style="display: flex; width: 96vw; margin: 2vw; gap: 2vw;">
+			<style>
+				#mapSelectionContainer {
+					width: 19vw;
+					height: 38vh;
+					border: 5px solid black;
+					border-radius: 10px;
+					overflow: hidden;
+					display: inline-block;
+				}
+			</style>
+			<div style="width: 23vw; row-gap: 2vw;"" >
+				<div id="mapSelectionContainer"style="width: 19vw;">
+				<font size="3" style="font-family:verdana">
+					<b>Map Selection</b><br>
+				</font>
+				<font size="2.5" style="font-family:verdana">
+					<p align="left">
+						<input type="radio" id="map1695radio" name="mapselection" value="map1695radio"
+							onchange="if (map1695radio.checked){ removemaps(); map1695.addTo(displaymap);}" checked>
+						<label for="map1695radio">1695 Joseph Gilmore Map</label><br>
+						<input type="radio" id="map1735radio" name="mapselection" value="map1735radio"
+							onchange="if (map1735radio.checked){ removemaps(); map1735.addTo(displaymap);}">
+						<label for="map1735radio">1735 John Wood Map</label><br>
+						<input type="radio" id="map1780radio" name="mapselection" value="map1780radio"
+							onchange="if (map1780radio.checked ){ removemaps(); map1780.addTo(displaymap);}">
+						<label for="map1780radio">1780 Frederick Taylor Map</label><br>
+						<input type="radio" id="map1795radio" name="mapselection" value="map1795radio"
+							onchange="if (map1795radio.checked){ removemaps(); map1795.addTo(displaymap);}">
+						<label for="map1795radio">1795 Harcourt Masters Map</label><br>
+						<input type="radio" id="map1810radio" name="mapselection" value="map1810radio"
+							onchange="if (map1810radio.checked){ removemaps(); map1810.addTo(displaymap);}">
+						<label for="map1810radio">1810 B. Donne Map</label><br>
+						<input type="radio" id="map2025radio" name="mapselection" value="map2025radio" checked=true
+							onchange="if (map2025radio.checked ){ removemaps(); map2025.addTo(displaymap);}">
+						<label for="map2025radio">Open Street Map</label><br>
+					</p>
+				</font>
+			</div>
+			<br><br>
+			<div id="mapSelectionContainer" style="width: 19vw;">
+				<font size="3" style="font-family:verdana">
+					<b>Map Selection<br>(High-Contrast)</b><br>
+				</font>
+				<font size="2.5" style="font-family:verdana">
+					<p align="left">
+						<input type="radio" id="map1695hcradio" name="mapselection" value="map1695hcradio"
+							onchange="if (map1695hcradio.checked){ removemaps(); map1695hc.addTo(displaymap);}">
+						<label for="map1695hcradio">1695 Joseph Gilmore Map</label><br>
+						<input type="radio" id="map1735hcradio" name="mapselection" value="map1735hcradio"
+							onchange="if (map1735hcradio.checked){ removemaps(); map1735hc.addTo(displaymap);}">
+						<label for="map1735hcradio">1735 John Wood Map</label><br>
+						<input type="radio" id="map1780hcradio" name="mapselection" value="map1780hcradio"
+							onchange="if (map1780hcradio.checked ){ removemaps(); map1780hc.addTo(displaymap);}">
+						<label for="map1780hcradio">1780 Frederick Taylor Map</label><br>
+						<input type="radio" id="map1795hcradio" name="mapselection" value="map1795hcradio"
+							onchange="if (map1795hcradio.checked){ removemaps(); map1795hc.addTo(displaymap);}">
+						<label for="map1795hcradio">1795 Harcourt Masters Map</label><br>
+						<input type="radio" id="map1810hcradio" name="mapselection" value="map1810hcradio"
+							onchange="if (map1810hcradio.checked){ removemaps(); map1810hc.addTo(displaymap);}">
+						<label for="map1810hcradio">1810 B. Donne Map</label><br>
+					</p>
+				</font>
+			</div>
+			</font>
+		</div>
+		<div style="width;: 46vw">
+			<style>
+				#mapContainer {
+					width: 50vw;
+					height: 80vh;
+					border: 5px solid black;
+					border-radius: 10px;
+					overflow: hidden;
+					display: inline-block;
+			</style>
+			<div class="column" id="mapContainer"></div>
+		</div>
+		<div style="width: 23vw">
+			<style>
+				#streetInfoContainer {
+					width: 19vw;
+					height: 80vh;
+					border: 5px solid black;
+					border-radius: 10px;
+					overflow: hidden;
+					display: inline-block;
+					padding: 0 10px;
+				}
+			</style>
+			<div id="streetInfoContainer">
+				<font size="3" style="font-family:verdana">
+					<b><span id="streetNameBox"></span> </b><br>
+					<b><span id="streetDateBox"></span> </b><br>
+					<font>
+						<p align="justify">
+							<font size="2.5" style="font-family:verdana">
+								<span id="streetInfoBox"></span><br><br>
+								<p align="left">
+									<span id="streetInfoReferencesBox"></span>
+									<font>
+								</p>
+			</div>
+		</div>
+	</center>
+	<font size="4" style="font-family:verdana">
+		<center>
+			<span id="yearSelection">1700</span>
+		</center>
+		<center>
+			<div class="slidecontainer" style="width: 80vw">
+				<b>1700</b>
+				<input type="range" min="1700" max="1800" value="1700" style="width: 46vw" list="tickmarks"
+					onchange="document.getElementById('yearSelection').innerText = this.value; selectedyear=this.value; updateStreets();">
+				<datalist id="tickmarks">
+					<option value="1700"></option>
+					<option value="1710"></option>
+					<option value="1720"></option>
+					<option value="1730"></option>
+					<option value="1740"></option>
+					<option value="1750"></option>
+					<option value="1760"></option>
+					<option value="1770"></option>
+					<option value="1780"></option>
+					<option value="1790"></option>
+					<option value="1800"></option>
+				</datalist>
+				<b>1800</b>
+			</div>
+	</font>
+</body>
+<script>
+	var selectedyear = 1700;
+	///////////////
+	// MAP CLASS //
+	///////////////
+	class Map {
+		constructor(name, file, bounds) {
+			this.name = name;
+			this.file = file;
+		}
+	}
+
+	//////////
+	// MAPS //
+	//////////
+	//Open Street Map
+	var map2025 = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'})
+
+	//1695 Joseph Gilmore Map
+	var map1695 = L.imageOverlay("maps/map1695.png", [[51.38761194, -2.36718729], [51.37549424, -2.35312669]]);
+	var map1695hc = L.imageOverlay("maps/map1695hc.png", [[51.38761194, -2.36718729], [51.37549424, -2.35312669]]);
+
+	//1735 John Wood Map
+	var map1735 = L.imageOverlay("maps/map1735.png", [[51.3884394, -2.3697282], [51.37379693, -2.34973871]]);
+	var map1735hc = L.imageOverlay("maps/map1735hc.png", [[51.3884394, -2.3697282], [51.37379693, -2.34973871]]);
+
+	//1780 Fredrik Taylor Map
+	var map1780 = L.imageOverlay("maps/map1780.png", [[51.39224555, -2.37245608], [51.37626566, -2.35032289]]);
+	var map1780hc = L.imageOverlay("maps/map1780hc.png", [[51.39224555, -2.37245608], [51.37626566, -2.35032289]]);
+
+	//c.1795 Harcourt Masters Map
+	var map1795 = L.imageOverlay("maps/map1795.png", [[51.39414584, -2.37656393], [51.372888826, -2.348713179]]);
+	var map1795hc = L.imageOverlay("maps/map1795hc.png", [[51.39414584, -2.37656393], [51.372888826, -2.348713179]]);
+
+	//Map of Bath B. Donne 1810
+	var map1810 = L.imageOverlay("maps/map1810.png", [[51.3960249, -2.3726466], [51.3747002, -2.3415184]]);
+	var map1810hc = L.imageOverlay("maps/map1810hc.png", [[51.3960249, -2.3726466], [51.3747002, -2.3415184]]);
+
+	//Streets 
+	var streetData = [];
+	var streetsLayer;
+
+	fetch("maps/streetinfo.json")
+		.then(res => res.json())
+		.then(data => {
+			console.log(data)
+			streetData = data;
+		});
+	function updateStreets() {
+		if (streetsLayer) {
+			streetsLayer.clearLayers();
+		}
+		fetch("maps/streets.geojson")
+			.then(res => res.json())
+			.then(data => {
+				streetsLayer = L.geoJSON(data, {
+					style: {color: "#D81B60", weight: 1},
+					onEachFeature: function (feature, layer) {
+						const streetid = feature.properties.id;
+						if (Array.isArray(streetData)) {
+							const street = streetData.find(item => item.CODE === streetid);
+							if (street.TO < selectedyear) {
+								layer.setStyle({fillOpacity: 0.3, opacity: 1, fillColor: "#D81B60"});
+							}
+							else if (street.TO >= selectedyear && street.FROM <= selectedyear) {
+								layer.setStyle({fillOpacity: 0.3, opacity: 1, fillColor: "#67FFFC"});
+								//, dashArray: "5, 5"
+							} else {
+								layer.setStyle({fillOpacity: 0, opacity: 0});
+							}
+						}
+						layer.on("click", function () {
+							if (Array.isArray(streetData)) {
+								const street = streetData.find(item => item.CODE === streetid);
+								if (street) {
+									document.getElementById("streetNameBox").innerText = `${street.NAME}` || '';
+									document.getElementById("streetDateBox").innerText = `(${street.DISPLAY_DATE})` || '';
+									document.getElementById("streetInfoBox").innerText = street.DESCRIPTION || '';
+									document.getElementById("streetInfoReferencesBox").innerText = street.REFERENCES || '';
+								}
+							}
+						});
+					}
+				}).addTo(displaymap);
+			});
+	}
+
+	//Clear all maps
+	function removemaps() {
+		if (displaymap.hasLayer(map1695)) {
+			displaymap.removeLayer(map1695);
+		}
+		else if (displaymap.hasLayer(map1695hc)) {
+			displaymap.removeLayer(map1695hc);
+		}
+		else if (displaymap.hasLayer(map1735)) {
+			displaymap.removeLayer(map1735);
+		}
+		else if (displaymap.hasLayer(map1735hc)) {
+			displaymap.removeLayer(map1735hc);
+		}
+		else if (displaymap.hasLayer(map1780)) {
+			displaymap.removeLayer(map1780);
+		}
+		else if (displaymap.hasLayer(map1780hc)) {
+			displaymap.removeLayer(map1780hc);
+		}
+		else if (displaymap.hasLayer(map1795)) {
+			displaymap.removeLayer(map1795);
+		}
+		else if (displaymap.hasLayer(map1795hc)) {
+			displaymap.removeLayer(map1795hc);
+		}
+		else if (displaymap.hasLayer(map1810)) {
+			displaymap.removeLayer(map1810);
+		}
+		else if (displaymap.hasLayer(map1810hc)) {
+			displaymap.removeLayer(map1810hc);
+		}
+		else if (displaymap.hasLayer(map2025)) {
+			displaymap.removeLayer(map2025);
+		}
+	}
+
+	//////////
+	// MAIN //
+	//////////
+	//Setup
+	const displaymap = L.map("mapContainer").setView([51.3810, -2.3590], 14);
+
+	//default map
+	map2025.addTo(displaymap);
+	updateStreets();
+	displaymap.dragging.enable();
+	displaymap.scrollWheelZoom.enable();
+	displaymap.setMinZoom(14);
+	displaymap.setMaxZoom(18);
+</script>
+
 </html>
